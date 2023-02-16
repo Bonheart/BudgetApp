@@ -14,7 +14,7 @@ int main()
 
     while(true){
 
-        choice = budget.select_option_from_users_menu();
+        choice = budget.select_option_from_main_menu();
 
         switch (choice){
 
