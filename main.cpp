@@ -13,7 +13,7 @@ int main() {
 
     while(true) {
 
-        if(budget.check_if_user_is_logged()!= true ){
+        if(budget.check_if_user_is_logged()!= true ) {
 
             choice = budget.select_option_from_main_menu();
 
@@ -31,11 +31,15 @@ int main() {
             }
         }
 
-        else{
+        else {
 
             choice = budget.select_option_from_users_menu();
 
-            switch(choice){
+            switch(choice) {
+
+            case '7':
+                budget.change_users_password();
+                break;
 
             case '8':
                 budget.user_logout();

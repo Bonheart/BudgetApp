@@ -10,6 +10,7 @@ void User_Manager::user_registration() {
     users_file.add_user_to_file(user);
 
     cout << "Account registered correctly" << endl;
+    Sleep(1000);
 
 }
 
@@ -107,20 +108,43 @@ bool User_Manager::check_if_user_is_logged(){
 
     if(logged_users_id > 0)
        return true;
-
     else
         return false;
 
 }
 
 
-int User_Manager::get_logged_users_id(){
+int User_Manager::get_logged_users_id() {
 
     return logged_users_id;
 }
 
-void User_Manager::user_logout(){
+void User_Manager::user_logout() {
 
     logged_users_id = 0;
 
+}
+
+
+void User_Manager::change_users_password() {
+
+    for (unsigned int i = 0; i < users.size(); i++) {
+
+        if(users[i].get_users_id() == logged_users_id ) {
+
+            cout << "Welcome, " << users[i].get_users_name() << endl;
+
+            string new_password = "";
+            cout << "Enter new password: ";
+            new_password = Helpful_Methods::load_line();
+
+            users[i].set_users_password(new_password);
+
+            cout << "Password changed successfully." << endl << endl;
+            Sleep(1000);
+            break;
+
+        }
+        // plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    }
 }

@@ -22,7 +22,7 @@ public:
     char select_option_from_users_menu();
     int logged_user_id;
     void user_logout();
-    void change_users_password;
+    void change_users_password();
 
     bool check_if_user_is_logged();
 

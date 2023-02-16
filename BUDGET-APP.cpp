@@ -36,3 +36,9 @@ void Budget_App::user_logout(){
     return user_manager.user_logout();
 
 }
+
+void Budget_App::change_users_password(){
+
+    user_manager.change_users_password();
+
+}
