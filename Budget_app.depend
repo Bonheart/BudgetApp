@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\budget-app.cpp
+	"BUDGET-APP.h"
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\budget-app.h
+	<iostream>
+	"User_Manager.h"
+	"Users_file.h"
+	"Helpful_Methods.h"
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\user_manager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Helpful_Methods.h"
+	"Users_file.h"
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\user.h
+	<iostream>
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\helpful_methods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\users_file.h
+	<iostream>
+	<vector>
+	<fstream>
+	"User.h"
+	"Markup.h"
+
+1676527879 c:\users\dell\documents\c++\budget_app\budgetapp\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\helpful_methods.cpp
+	"Helpful_Methods.h"
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\income_expense_manager.cpp
+
+1676529023 source:c:\users\dell\documents\c++\budget_app\budgetapp\main.cpp
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\user.cpp
+	"User.h"
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\user_manager.cpp
+	"User_Manager.h"
+	"windows.h"
+
+1676527879 source:c:\users\dell\documents\c++\budget_app\budgetapp\users_file.cpp
+	"Users_file.h"
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>248</y>
+      <w>104</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-Id :int
+-login : string
+-password : string
+--
++ set_name():void;
++ set_surname():void;
++ set_id():void;
++ set_login():void;
++ set_password():void;
++ get_name():string;
++ get_surname():string;
++ get_id():int;
++ get_login():string;
++ get_password():string;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>248</y>
+      <w>112</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>Income
+--
++ specify_quantity():void;
++ specify_income():void;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>248</y>
+      <w>96</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>Expense
+--
++specify_quantity():void;
++specify_expense():void;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>248</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Helpful Methods</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>824</x>
+      <y>248</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Budget App - główna</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>248</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Income File</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1016</x>
+      <y>248</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Expanse File</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>248</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>XML File</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>248</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Markup</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>232</x>
+      <y>248</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>User Maneger</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>248</y>
+      <w>96</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Balance
+--
++ current_month_income():float;
++ current_month_expense():float;
++ display_income():void;
++ display_expense():void;
++ last_month's_expense():void;
++ last_month's_income():void;
++ display_current_month's_balance():void;
++ display_last_month's_balance():void;
++ display_chosen_period_of_time_balance():void;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>248</y>
+      <w>96</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Date
+--
++ get_current_date():void;
++ is_year_leap():bool;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
