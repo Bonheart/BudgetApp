@@ -22,7 +22,11 @@ class User_Manager{
 
 public:
 
-    User_Manager(string users_file_name): users_file(users_file_name){};
+    User_Manager(string users_file_name): users_file(users_file_name){
+
+        users = users_file.load_users_from_file(); // in constructors body i can set users as vector which will be loaded via object users_file and its method load_users_from_file()
+
+    };
     void user_registration();
     void user_login();
     void logged_user_password_changing();

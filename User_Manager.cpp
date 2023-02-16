@@ -88,17 +88,21 @@ void User_Manager::user_login() {
                     return;
                 }
             }
+
+            system("cls");
+            cout << "Entered wrong password 3 times. Sorry." << endl;
+            Sleep(2000);
+
             for (int i = 3; i > 0; i--) {
                 system ("cls");
-                cout << "Entered wrong password 3 times. Exiting in: " << i << endl;
+                cout << "Exiting in: " << i << endl;
                 Sleep(1000);
-
             }
             exit(0);
         }
         i++;
     }
-    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    cout << "User not found. Try again" << endl << endl;
     system("pause");
     return;
 }
