@@ -8,7 +8,6 @@ using namespace std;
 int main()
 {
 
-
     Budget_App budget("users.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 
     char choice;

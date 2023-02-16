@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Users>
 <User>
-<User's ID >1</User's ID >
-<User's name >Rado</User's name >
-<User's surname >Gucio</User's surname >
-<User's login >r</User's login >
-<User's password >123</User's password >
+<User ID >1</User ID >
+<User name >Radek</User name >
+<User surname >Gucwa</User surname >
+<User login >r</User login >
+<User password >123</User password >
+</User>
+<User>
+<User ID >1</User ID >
+<User name >Radzik</User name >
+<User surname >Tadzik</User surname >
+<login>t</login>
+<User password >123</User password >
 </User>
 </Users>
