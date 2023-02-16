@@ -82,7 +82,7 @@ void User_Manager::user_login() {
 
                 if (users[i].get_users_password() == password) {
 
-                    cout << endl << "You are logged in." << endl << endl;
+                    cout << endl << "Welcome, " << users[i].get_users_name() <<" "<< users[i].get_users_surname() << endl << endl;
                     Sleep(2000);
                     //system("pause");
                     return;

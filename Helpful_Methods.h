@@ -14,6 +14,7 @@ public:
     static string load_line();
     static string change_first_letter_to_big_one(string text_to_convert);
     static char select_option_from_main_menu();
+    static char select_option_from_users_menu();
 
 
 

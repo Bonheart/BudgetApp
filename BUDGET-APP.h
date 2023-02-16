@@ -18,6 +18,7 @@ public:
     Budget_App(string users_file_name) : user_manager(users_file_name){};
     void user_registration();
     void user_login();
+    char select_option_from_main_menu();
     char select_option_from_users_menu();
 
 
