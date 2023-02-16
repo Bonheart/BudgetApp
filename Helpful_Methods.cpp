@@ -52,6 +52,7 @@ char Helpful_Methods::select_option_from_users_menu(){
     cout <<" 3. Display current month's balance." << endl;
     cout <<" 4. Display last month's balance." << endl;
     cout <<" 5. I want to choose balance's period of time myself!" << endl;
+    cout <<" 7. Change password." << endl;
     cout <<" 8. Logout" << endl;
 
     cin >> choice;

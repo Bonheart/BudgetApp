@@ -35,6 +35,7 @@ public:
     int get_new_id_for_user();
     bool check_if_user_is_logged();
     int get_logged_users_id();
+    void change_users_password();
 
 
 
