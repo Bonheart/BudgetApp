@@ -28,7 +28,7 @@ void Users_File::add_user_to_file(User user){
     xml.Save("users.xml");
 }
 
-vector <User> Users_File::load_users_from_file(){
+vector <User> Users_File::load_users_from_file(){ // I need User's data in order to administer them in code below.
 
     User user;
 
@@ -38,17 +38,16 @@ vector <User> Users_File::load_users_from_file(){
     string users_login = "", users_name = "", users_surname = "", users_password = "";
     int users_id;
 
-    bool check_if_file_exists = xml.Load("users.xml");
+    xml.Load("users.xml"); // i don't need to check if file exists by bool flag. i only need to load my xml file to this method.
 
     xml.FindElem("Users"); // finding my main root element Users
     xml.IntoElem(); // stepping into root element
 
-    while (xml.FindElem("User")){
-
+    while (xml.FindElem("User")) {
 
         xml.IntoElem();
-      //  xml.FindElem("ID");
-      //  users_id = xml.GetData();
+        xml.FindElem("ID");
+        users_id = stoi(xml.GetData());
         xml.FindElem("Name");
         users_name = xml.GetData();
         xml.FindElem("Surname");
@@ -59,17 +58,15 @@ vector <User> Users_File::load_users_from_file(){
         users_password = xml.GetData();
         xml.OutOfElem();
 
+        user.set_users_id(users_id);
+        user.set_users_name(users_name);
+        user.set_users_surname(users_surname);
+        user.set_users_login(users_login);
+        user.set_users_password(users_password);
+
+        users.push_back(user);
+
     }
-
-    // pamietac aby po zalogowaniu sie wyskoczyla opcja zprzywitaniem sie do uzytkownika. ok>
-    user.set_users_name(users_name);
-    user.set_users_surname(users_surname);
-    user.set_users_login(users_login);
-    user.set_users_password(users_password);
-   // user.set_users_login(users_login);
-
-    users.push_back(user);
-
 
     return users;
 }

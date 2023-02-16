@@ -18,7 +18,7 @@ User User_Manager::insert_new_users_data() {
 
     User user;
 
-    user.set_users_id(get_logged_users_id());
+    user.set_users_id(get_new_id_for_user());
 
     string users_name;
     cout << "Enter name: ";
@@ -45,17 +45,12 @@ User User_Manager::insert_new_users_data() {
     users_password = Helpful_Methods::load_line();
     user.set_users_password(users_password);
 
-    cout <<users_name << endl;
-    cout <<users_surname << endl;
-    cout <<users_login << endl;
-    cout <<users_password << endl;
-
     return user;
 
 
 }
 
-int User_Manager::get_logged_users_id() {
+int User_Manager::get_new_id_for_user() {
 
     if (users.empty() == true)
         return 1;
@@ -64,7 +59,8 @@ int User_Manager::get_logged_users_id() {
 
 }
 
-void User_Manager::user_login() {
+int User_Manager::user_login() {
+
     string login = "", password = "";
     unsigned int i = 0;
 
@@ -77,15 +73,15 @@ void User_Manager::user_login() {
 
             for (int attempts_number = 3; attempts_number > 0; attempts_number--) {
 
-                cout << "Enter your password. Tries left: " << attempts_number;
+                cout << "Enter your password. Attempts left: " << attempts_number << " ";
                 password = Helpful_Methods::load_line();
 
                 if (users[i].get_users_password() == password) {
 
                     cout << endl << "Welcome, " << users[i].get_users_name() <<" "<< users[i].get_users_surname() << endl << endl;
                     Sleep(2000);
-                    //system("pause");
-                    return;
+                    logged_users_id = users[i].get_users_id();
+                    return logged_users_id;
                 }
             }
 
@@ -104,6 +100,27 @@ void User_Manager::user_login() {
     }
     cout << "User not found. Try again" << endl << endl;
     system("pause");
-    return;
+    return 0;
 }
 
+bool User_Manager::check_if_user_is_logged(){
+
+    if(logged_users_id > 0)
+       return true;
+
+    else
+        return false;
+
+}
+
+
+int User_Manager::get_logged_users_id(){
+
+    return logged_users_id;
+}
+
+void User_Manager::user_logout(){
+
+    logged_users_id = 0;
+
+}

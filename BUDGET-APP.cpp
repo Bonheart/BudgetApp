@@ -24,3 +24,15 @@ char Budget_App::select_option_from_users_menu(){
     return Helpful_Methods::select_option_from_users_menu();
 
 }
+
+bool Budget_App::check_if_user_is_logged(){
+
+    return user_manager.check_if_user_is_logged();
+}
+
+
+void Budget_App::user_logout(){
+
+    return user_manager.user_logout();
+
+}

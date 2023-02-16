@@ -5,30 +5,54 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
 
     Budget_App budget("users.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 
     char choice;
 
-    while(true){
+    while(true) {
 
-        choice = budget.select_option_from_main_menu();
+        if(budget.check_if_user_is_logged()!= true ){
 
-        switch (choice){
+            choice = budget.select_option_from_main_menu();
 
-        case '1':
-            budget.user_registration();
-            break;
-        case '2':
-            budget.user_login();
-            break;
-        case '3':
-            exit(0);
+            switch (choice) {
+
+            case '1':
+                budget.user_registration();
+                break;
+            case '2':
+                budget.user_login();
+                break;
+            case '3':
+                exit(0);
+
+            }
+        }
+
+        else{
+
+            choice = budget.select_option_from_users_menu();
+
+            switch(choice){
+
+            case '8':
+                budget.user_logout();
+                break;
+            default:
+                cout << "Enter proper number." << endl;
+
+
+
+
+
+            }
+
 
         }
     }
+
 
     return 0;
 }

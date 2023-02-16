@@ -20,7 +20,10 @@ public:
     void user_login();
     char select_option_from_main_menu();
     char select_option_from_users_menu();
+    int logged_user_id;
+    void user_logout();
 
+    bool check_if_user_is_logged();
 
 
 };

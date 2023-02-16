@@ -65,3 +65,70 @@
 1676547325 source:c:\users\dell\documents\c++\budget\budgetapp\users_file.cpp
 	"Users_file.h"
 
+1676570528 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.cpp
+	"BUDGET-APP.h"
+
+1676570528 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.h
+	<iostream>
+	"User_Manager.h"
+	"Users_file.h"
+	"Helpful_Methods.h"
+
+1676565118 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user_manager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Helpful_Methods.h"
+	"Users_file.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user.h
+	<iostream>
+
+1676565015 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+
+1676564888 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\users_file.h
+	<iostream>
+	<vector>
+	<fstream>
+	"User.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1676570551 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.cpp
+	"Helpful_Methods.h"
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.cpp
+
+1676570528 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\main.cpp
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user.cpp
+	"User.h"
+
+1676570461 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user_manager.cpp
+	"User_Manager.h"
+	"windows.h"
+
+1676565146 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\users_file.cpp
+	"Users_file.h"
+
