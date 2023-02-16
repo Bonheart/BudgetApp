@@ -52,7 +52,6 @@ vector <User> Users_File::load_users_from_file(){
 
     }
 
-
     user.set_users_login(users_login);
 
     users.push_back(user);

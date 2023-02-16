@@ -1,6 +1,9 @@
 users.xml
 bin/
 obj/
-Budget_app.cbp
+budget_application.cbp
 Budget_app.depend
 Budget_app.layout
+README.md
+obj
+bin

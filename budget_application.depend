@@ -8,7 +8,7 @@
 	"Users_file.h"
 	"Helpful_Methods.h"
 
-1676531504 c:\users\dell\documents\c++\budget\budgetapp\user_manager.h
+1676542795 c:\users\dell\documents\c++\budget\budgetapp\user_manager.h
 	<iostream>
 	<vector>
 	"User.h"
@@ -62,6 +62,6 @@
 	"User_Manager.h"
 	"windows.h"
 
-1676541049 source:c:\users\dell\documents\c++\budget\budgetapp\users_file.cpp
+1676542599 source:c:\users\dell\documents\c++\budget\budgetapp\users_file.cpp
 	"Users_file.h"
 
