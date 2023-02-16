@@ -52,6 +52,7 @@ vector <User> Users_File::load_users_from_file(){
 
     }
 
+    // pamietac aby po zalogowaniu sie wyskoczyla opcja zprzywitaniem sie do uzytkownika. ok>
     user.set_users_login(users_login);
 
     users.push_back(user);
