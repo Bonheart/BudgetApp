@@ -2,8 +2,9 @@ users.xml
 bin/
 obj/
 budget_application.cbp
-Budget_app.depend
-Budget_app.layout
+budget_application.depend
+budget_application.layout
 README.md
 obj
 bin
+users.xml
