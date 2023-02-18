@@ -160,7 +160,7 @@ void User_Manager::change_users_password() {
 
             users[i].set_users_password(new_password);
 
-            users_file.ChangePasswordInFile(logged_users_id,new_password);
+            users_file.change_password_in_file(logged_users_id,new_password);
 
 
             cout << "Password changed successfully." << endl << endl;

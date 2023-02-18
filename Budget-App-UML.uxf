@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>408</x>
-      <y>248</y>
+      <x>368</x>
+      <y>240</y>
       <w>104</w>
       <h>296</h>
     </coordinates>
@@ -31,8 +31,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>512</x>
-      <y>248</y>
+      <x>472</x>
+      <y>240</y>
       <w>112</w>
       <h>296</h>
     </coordinates>
@@ -45,8 +45,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
-      <y>248</y>
+      <x>584</x>
+      <y>240</y>
       <w>96</w>
       <h>296</h>
     </coordinates>
@@ -59,30 +59,49 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>248</y>
+      <x>680</x>
+      <y>240</y>
       <w>104</w>
-      <h>32</h>
+      <h>320</h>
     </coordinates>
-    <panel_attributes>Helpful Methods</panel_attributes>
+    <panel_attributes>Helpful Method
+_+ load_line():string_
+_+ change_first_letter_to_big_one():string;_
+_+ select_option_from_main_menu():char;_
+_+ select_option_from_users_menu():char;_
+_+ int_to_string_convertion():string;_
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>824</x>
-      <y>248</y>
+      <x>784</x>
+      <y>240</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
-    <panel_attributes>Budget App - główna</panel_attributes>
+    <panel_attributes>Budget App - główna
+--
+- user_manager:User_Manager;
+--
++ &lt;&lt;construct&gt;&gt; Budget_App();
++ user_registration():void;
++ user_login():void;
++ select_option_from_main_menu():char;
++ select_option_from_users_menu():char;
++ logged_user_id():int;
++ user_logout():void;
++ change_users_password():void;
++ check_if_user_is_logged():bool;
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>248</y>
+      <x>880</x>
+      <y>240</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -92,8 +111,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1016</x>
-      <y>248</y>
+      <x>976</x>
+      <y>240</y>
       <w>104</w>
       <h>32</h>
     </coordinates>
@@ -103,8 +122,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>248</y>
+      <x>1080</x>
+      <y>240</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -114,8 +133,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>248</y>
+      <x>280</x>
+      <y>240</y>
       <w>88</w>
       <h>32</h>
     </coordinates>
@@ -125,19 +144,34 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>232</x>
-      <y>248</y>
+      <x>192</x>
+      <y>240</y>
       <w>88</w>
-      <h>32</h>
+      <h>240</h>
     </coordinates>
-    <panel_attributes>User Maneger</panel_attributes>
+    <panel_attributes>User Maneger
+--
+-users_file:Users_File;
+- vector User: users;
+- logged_users_id:int;
+- check_if_user_exists():bool;
+- get_new_usesr_id():int;
+--
+&lt;&lt;construct&gt;&gt; User_Manager
++ user_registration():void;
++ user_login():int;
++ get_new_id_for_user():int;
++ check_if_user_is_logged():bool;
++ get_logged_users_id():int;
++ void change_users_password():void;
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>136</x>
-      <y>248</y>
+      <x>96</x>
+      <y>240</y>
       <w>96</w>
       <h>240</h>
     </coordinates>
@@ -157,8 +191,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>248</y>
+      <x>0</x>
+      <y>240</y>
       <w>96</w>
       <h>240</h>
     </coordinates>
@@ -166,6 +200,22 @@
 --
 + get_current_date():void;
 + is_year_leap():bool;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>352</y>
+      <w>80</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Users_File
+--
+&lt;&lt;construct&gt;&gt; Users_file()
++ add_user_to_file():void;
++ vector &lt;User&gt; load+users_from_file;
++ change_password_in_file():void;</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
