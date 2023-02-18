@@ -30,7 +30,6 @@ public:
     };
     void user_registration();
     int user_login();
-    void logged_user_password_changing();
     void user_logout();
     int get_new_id_for_user();
     bool check_if_user_is_logged();
