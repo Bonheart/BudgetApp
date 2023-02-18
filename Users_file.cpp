@@ -70,3 +70,32 @@ vector <User> Users_File::load_users_from_file(){ // I need User's data in order
 
     return users;
 }
+
+void Users_File::ChangePasswordInFile(int logged_user_id, string new_users_password)
+{
+    CMarkup xml;
+    bool fileExists = xml.Load("users.xml");
+
+    int users_id_in_file {};
+    if (fileExists)
+    {
+        xml.FindElem("Users");
+        xml.IntoElem();
+        while (xml.FindElem("User"))
+        {
+            xml.IntoElem();
+            xml.FindElem("ID");
+            users_id_in_file = stoi(xml.GetData());
+            if (users_id_in_file == logged_user_id)
+            {
+                xml.FindElem("Password");
+                xml.SetData(new_users_password);
+                break;
+            }
+            xml.OutOfElem();
+        }
+        xml.Save("users.xml");
+    }
+    else
+        cout << "Nie mo¿na otworzyc pliku !" << endl;
+}

@@ -19,6 +19,7 @@ public:
     Users_File(string users_file_name){};
     void add_user_to_file(User user);
     vector <User> load_users_from_file();
+    void ChangePasswordInFile(int loggedUserId, string newUserPassword);
 
 };
 
