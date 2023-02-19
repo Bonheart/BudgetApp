@@ -36,6 +36,8 @@
 		<Unit filename="BUDGET-APP.h" />
 		<Unit filename="Helpful_Methods.cpp" />
 		<Unit filename="Helpful_Methods.h" />
+		<Unit filename="Income.cpp" />
+		<Unit filename="Income.h" />
 		<Unit filename="Income_Expense_Manager.cpp" />
 		<Unit filename="Income_Expense_Manager.h" />
 		<Unit filename="Markup.cpp" />

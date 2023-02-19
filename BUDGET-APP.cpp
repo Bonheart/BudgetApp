@@ -10,6 +10,7 @@ void Budget_App::user_registration(){
 void Budget_App::user_login(){
 
     user_manager.user_login();
+  //  date.get_current_data_from_PC();
 
 }
 
