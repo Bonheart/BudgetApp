@@ -4,7 +4,8 @@
 bool Date::check_if_year_is_leap(int year){
 
 
-    bool check_if_year_is_leap = ((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0));
+    bool check_if_year_is_leap = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+    cout << "Entered year is leap" << endl;
     return check_if_year_is_leap;
 
 }
@@ -41,25 +42,25 @@ int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
 
     if (month == 3 || month == 6 || month == 9 || month == 10){
 
-      //  days = 30;
-        cout << "I've got 30 days" << endl;
+        days = 30;
+        cout << "This month has 30 days" << endl;
     }
 
     else if (month == 2){
 
-        if(check_if_year_is_leap == 1){
+        if(check_if_year_is_leap == true){
             days = 29;
-            cout << "I've got 29 days because year is leap" << endl;
+            cout << "This year is leap. It has 29 days." << endl;
         }
         else{
             days = 28;
-            cout << "I've got 28 days because year is leap" << endl;
+            cout << "This year is not leap, so it only has 28 days" << endl;
         }
 
     }
     else{
         days = 31;
-        cout << "I've got 31 days" << endl;
+        cout << "This month has 31 days" << endl;
     }
 
     return days;
