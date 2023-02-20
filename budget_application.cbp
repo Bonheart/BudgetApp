@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="BUDGET-APP.cpp" />
 		<Unit filename="BUDGET-APP.h" />
+		<Unit filename="Date.cpp" />
+		<Unit filename="Date.h" />
 		<Unit filename="Helpful_Methods.cpp" />
 		<Unit filename="Helpful_Methods.h" />
 		<Unit filename="Income.cpp" />
