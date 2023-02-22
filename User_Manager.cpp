@@ -85,8 +85,7 @@ int User_Manager::user_login() {
                     return logged_users_id;
                 }
             }
-
-            system("cls");
+          //  system("cls");
             cout << "Entered wrong password 3 times. Sorry." << endl;
             Sleep(2000);
 

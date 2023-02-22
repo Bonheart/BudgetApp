@@ -7,4 +7,11 @@
 <Login>kinpot</Login>
 <Password>4321</Password>
 </User>
+<User>
+<ID>2</ID>
+<Name>Radek</Name>
+<Surname>Gucwa</Surname>
+<Login>rg</Login>
+<Password>123</Password>
+</User>
 </Users>
