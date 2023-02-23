@@ -16,7 +16,7 @@ public:
     static char select_option_from_main_menu();
     static char select_option_from_users_menu();
     static string int_to_string_conversion(int number);
-
+    static void display_months_list();
 
 
 };

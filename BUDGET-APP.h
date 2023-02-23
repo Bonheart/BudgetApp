@@ -6,12 +6,14 @@
 #include "User_Manager.h"
 #include "Users_file.h"
 #include "Helpful_Methods.h"
+#include "Date.h"
 
 using namespace std;
 
 class Budget_App{
 
     User_Manager user_manager;
+    Date date;
 
 
 public:
@@ -23,6 +25,8 @@ public:
     int logged_user_id;
     void user_logout();
     void change_users_password();
+
+    void display_date();
 
     bool check_if_user_is_logged();
 
