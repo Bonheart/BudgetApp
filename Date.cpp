@@ -7,12 +7,10 @@ bool Date::check_if_year_is_leap(int year) {
     bool leap_year;
 
     if(leap_year = (((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0)))) {
-        cout << "Entered year is leap" << endl;
         return leap_year;
     }
 
     else {
-        cout << "Entered year is not leap" << endl;
         return leap_year;
     }
 
@@ -48,10 +46,9 @@ int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
 
     int days;
 
-    if (month == 3 || month == 6 || month == 9 || month == 10) {
+    if (month == 4 || month == 6 || month == 9 || month == 10) {
 
         days = 30;
-        cout << "This month has 30 days" << endl;
         return days;
     }
 
@@ -59,16 +56,15 @@ int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
 
         if(check_if_year_is_leap == true) {
             days = 29;
-            cout << "This year is leap. It has 29 days." << endl;
+            cout << "LEAP YEAR - be aware of amount of February's days" << endl;
         } else {
             days = 28;
-            cout << "This year is not leap, so it only has 28 days" << endl;
+            cout << "This year IS NOT leap." << endl;
             return days;
         }
 
     } else {
         days = 31;
-        cout << "This month has 31 days" << endl;
     }
 
     return days;
@@ -88,7 +84,7 @@ string Date::entering_manual_date() {
     int entered_month = 0, entered_year = 0, entered_day = 0;
     string data_in_string = "", year_in_string = "", month_in_string = "", day_in_string = "";
 
-    cout << "This Budget APP works only since 2000-01-01 to current year's month. Any attempts to exceed this range will be punished." << endl;
+    cout << "This Budget APP works only in date range 2000-01-01 - current year's month. Any attempts to exceed this range will be punished." << endl;
     system("pause");
     system("cls");
 
@@ -111,13 +107,13 @@ string Date::entering_manual_date() {
     Helpful_Methods::display_months_list();
 
     cin >> entered_month;
-
     i = 1;
     while (entered_month < 1 || entered_month > 12) {
 
         system ("cls");
-        Sleep(200);
         cout << "You entered wrong month's number. Attempts left: " << 3 - i << endl;
+        Sleep(3000);
+        system ("cls");
         Helpful_Methods::display_months_list();
         cin >> entered_month;
 
@@ -128,6 +124,7 @@ string Date::entering_manual_date() {
         i++;
     }
 
+    system ("cls");
     month_days = check_amount_of_days_in_month(check_if_year_is_leap(entered_year),entered_month);
 
     i = 1;
@@ -142,12 +139,11 @@ string Date::entering_manual_date() {
         cin >> entered_day;
 
         if( i == 3) {
-            cout << "Day in  has been entered wrong 3 times. Goodbye." << endl;
+            cout << "Given day has been entered wrong 3 times. Goodbye." << endl;
             exit(0);
         }
         i++;
     }
-
     string enetered_month_converted_to_string = "";
     enetered_month_converted_to_string = Helpful_Methods::int_to_string_conversion(entered_month);
 
