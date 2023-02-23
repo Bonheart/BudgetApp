@@ -7,6 +7,7 @@
 #include "Users_file.h"
 #include "Helpful_Methods.h"
 #include "Date.h"
+#include "Income.h"
 
 using namespace std;
 
@@ -14,10 +15,22 @@ class Budget_App{
 
     User_Manager user_manager;
     Date date;
+    Income *income;
 
 
 public:
-    Budget_App(string users_file_name) : user_manager(users_file_name){};
+    Budget_App(string users_file_name) : user_manager(users_file_name){
+
+        income = NULL;
+
+    };
+
+    ~Budget_App(){
+
+    delete income;
+    income - NULL;
+    };
+
     void user_registration();
     void user_login();
     char select_option_from_main_menu();

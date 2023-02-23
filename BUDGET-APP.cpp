@@ -11,7 +11,7 @@ void Budget_App::user_login(){
 
     user_manager.user_login();
  //   date.get_current_data_from_PC();
-    date.entering_manual_date();
+ //   date.entering_manual_date();
 
 }
 
@@ -35,7 +35,7 @@ bool Budget_App::check_if_user_is_logged(){
 
 void Budget_App::user_logout(){
 
-    return user_manager.user_logout();
+    user_manager.user_logout();
 
 }
 

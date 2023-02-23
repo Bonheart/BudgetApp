@@ -48,10 +48,6 @@ int main() {
             default:
                 cout << "Enter proper number." << endl;
 
-
-
-
-
             }
 
 
