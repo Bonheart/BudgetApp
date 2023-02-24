@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    Budget_App budget("users.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
+    Budget_App budget("users.xml", "income.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 
     char choice;
 
@@ -37,6 +37,9 @@ int main() {
             choice = budget.select_option_from_users_menu();
 
             switch(choice) {
+            case '1':
+                budget.add_income();
+                break;
 
             case '7':
                 budget.change_users_password();

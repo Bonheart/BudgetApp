@@ -87,3 +87,9 @@ void Helpful_Methods::display_months_list() {
     cout << "Enter month's number: " << endl;
 
 }
+
+void Helpful_Methods::check_how_many_commas_user_entered(string text){
+
+
+
+}

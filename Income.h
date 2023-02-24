@@ -17,6 +17,17 @@ class Income{
 
 public:
 
+    Income(int incomes_id = 0, int logged_users_id = 0, int date = 0, string amount_of_income = "", string income_title = "", string string_date = ""){
+
+        this -> incomes_id = incomes_id;
+        this -> logged_users_id = logged_users_id;
+        this -> date = date;
+        this -> amount_of_income = amount_of_income;
+        this -> income_title = income_title;
+        this -> string_date = string_date;
+
+    }
+
     void set_incomes_id(int new_income_id);
     void set_logged_users_id(int new_logged_users_id);
     void set_date(int new_date);
