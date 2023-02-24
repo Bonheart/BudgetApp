@@ -3,53 +3,86 @@
 Income Income_Expense_Manager::add_info_about_income() {
 
     Income income;
-    char choice;
-    string income_date = "", income_title = "", income_amount = "";
+    string income_date = "", income_title, income_amount = "";
 
-    cout << "Do you wish to add an income? Choose Y/N " << endl;
-    cin >> choice;
-
-    //  income.set_incomes_id(get_new_income_id());
+    //  income.set_incomes_id(get_new_income_id() + 1);
     // income.set_logged_users_id(LOGGED_USER_ID);
+    /*
+    string data_option_choice;
+    cout << "Set income data. Two options: today's date (TD) or manually chosen date (MCD)" << endl;
+    cin >> data_option_choice;
+    transform(data_option_choice.begin(), data_option_choice.end(), data_option_choice.begin(), :: toupper);
 
-    while (choice != 89 || choice != 78 || choice != 110 || choice != 121 ) {
+        if(data_option_choice == "MCD") {
 
-        if(choice == 121 || choice == 89) {
+            cout << "You have chosen to enter date manually. Preparing." << endl;
+            Sleep(2000);
+            system("cls");
 
-            string data_option_choice;
-            cout << "Set income data. Two options: today's date (TD) or manually chosen date (MCD)" << endl;
-            cin >> data_option_choice;
-            transform(data_option_choice.begin(), data_option_choice.end(), data_option_choice.begin(), :: toupper);
+            income_date = date.entering_manual_date(); // do settera
+            Sleep(1500);
+            system("cls");
 
-            while(data_option_choice != "MCD" || data_option_choice != "TD") {
+            cout << "Enter income title: " << endl;
+            income_title = Helpful_Methods::load_line(); // do settera
+            system("cls");
 
-                if(data_option_choice == "MCD") {
+            cout << "Enter income. Remember to type amount of income separated with dots." << endl;
+            income_amount = Helpful_Methods::load_line();
+            income.set_incomes_amount(income_amount);
 
-                    cout << "You have chosen to enter date manually. Preparing." << endl;
-                    Sleep(2000);
-                    system("cls");
-                    income_date = date.entering_manual_date(); // do settera
-                    income_title = Helpful_Methods::load_line(); // do settera
-                    income_amount = Helpful_Methods::load_line();
-                    if(income_amount.find(","))
+            while(Helpful_Methods::check_if_text_has_commas(income_amount) == true) {
 
+                cout << "Entered income spearated with commas. Please separate with dots." << endl;
+                income_amount = Helpful_Methods::load_line();
+                system("cls");
+
+                if (Helpful_Methods::check_if_text_has_commas(income_amount) == true){
+                    cout << "Income set properly." << endl;
                     break;
-
                 }
+
+            //    if(Helpful_Methods::check_if_text_has_commas(income_amount) == true) {
+
+
+                                        if(Helpful_Methods::check_how_many_dots_user_entered(income_amount) > 2) {
+
+                                            do {
+
+                                                cout << "You cannot enter more than 1 dot. Try again." << endl;
+                                                income_amount = Helpful_Methods::load_line();
+                                                system("cls");
+
+                                            } while(Helpful_Methods::check_how_many_dots_user_entered(income_amount) == 1);
+                                        }
+
+               // }
+
             }
-        } else
-            cout << "enter proper character " << endl;
-            cin >> choice;
-    }
+        }
+    cout << income_title << endl;
+    */
+    cout << "set income title: " << endl;
+    cin >> income_title;
+    income.set_incomes_title(income_title);
+
+    cout << income_title << endl;
+    system("pause");
+
     return income;
 }
 
 void Income_Expense_Manager::add_new_income() {
 
-    Income income;
+    Income income = add_info_about_income();
 
-    income = add_info_about_income();
-    incomes.push_back(income);
+   // incomes.push_back(income);
+
+   // income_file.add_income_to_file(income);
+
+
+    cout << "income added." << endl;
+    system("pause");
 
 }
 

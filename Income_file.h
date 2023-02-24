@@ -13,7 +13,7 @@ class Income_File{
 
 public:
 
-    Income_File(string income_filename){};
+    Income_File(){};
     void add_income_to_file(Income income);
     vector <Income> load_income_from_file();
 

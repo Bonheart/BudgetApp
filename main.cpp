@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    Budget_App budget("users.xml", "income.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
+    Budget_App budget("users.xml");// "income.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 
     char choice;
 
@@ -52,11 +52,7 @@ int main() {
                 cout << "Enter proper number." << endl;
 
             }
-
-
         }
     }
-
-
     return 0;
 }

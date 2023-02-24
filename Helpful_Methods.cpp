@@ -88,8 +88,27 @@ void Helpful_Methods::display_months_list() {
 
 }
 
-void Helpful_Methods::check_how_many_commas_user_entered(string text){
+bool Helpful_Methods::check_if_text_has_commas(string text) {
 
 
+    if((text.find(',') != string::npos)){
+        cout << "commas detected " << endl;
+        return true;
+    }
+    else
+        cout << "commas not detected" << endl;
+        return false;
 
+}
+
+int Helpful_Methods::check_how_many_dots_user_entered(string text){
+    int counting = 0;
+    for( unsigned int i = 0; i < text.length(); i++) {
+
+        if(text[i] == '.')
+            counting++;
+
+    }
+
+    return counting;
 }

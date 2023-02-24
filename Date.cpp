@@ -8,9 +8,6 @@ bool Date::check_if_year_is_leap(int year) {
 
     leap_year = (((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0)));
         return leap_year;
-
-
-
 }
 
 
@@ -155,8 +152,6 @@ string Date::entering_manual_date() {
         entered_day_converted_to_string = "0" + entered_day_converted_to_string;
     }
     current_date_in_string = Helpful_Methods::int_to_string_conversion(entered_year) + "-" + enetered_month_converted_to_string + "-" + entered_day_converted_to_string;
-
-    cout << current_date_in_string << endl;
 
     return current_date_in_string;
 }

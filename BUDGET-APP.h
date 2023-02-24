@@ -23,7 +23,7 @@ class Budget_App{
 
 
 public:
-    Budget_App(string users_file_name, string income_filename) : user_manager(users_file_name), income_file(income_filename) {
+    Budget_App(string users_file_name) : user_manager(users_file_name) {
 
        income_expense_manager = NULL;
 

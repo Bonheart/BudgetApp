@@ -140,23 +140,6 @@ void User_Manager::change_users_password() {
             cout << "Enter new password: ";
             new_password = Helpful_Methods::load_line();
 
-            /*
-            xml.FindElem("Users");
-            xml.IntoElem(); // stepping into Users
-            xml.FindElem("User");
-            xml.IntoElem(); // stepping into User
-            xml.FindElem("ID");
-            users_id = stoi(xml.GetData());
-            if(users_id = logged_users_id){
-            xml.FindElem("Password");
-            xml.SetData(new_password);
-            xml.Save("users.xml");
-        }
-            else
-            xml.OutOfElem();
-            */
-
-
             users[i].set_users_password(new_password);
 
             users_file.change_password_in_file(logged_users_id,new_password);
