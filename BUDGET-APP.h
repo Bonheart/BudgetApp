@@ -39,6 +39,7 @@ public:
     void add_income();
 
     void display_date();
+    void display_incomes();
 
     bool check_if_user_is_logged();
 

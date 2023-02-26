@@ -143,7 +143,6 @@ void User_Manager::change_users_password() {
 
             users_file.change_password_in_file(logged_users_id,new_password);
 
-
             cout << "Password changed successfully." << endl << endl;
             Sleep(1000);
             break;

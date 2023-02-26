@@ -40,6 +40,9 @@ int main() {
             case '1':
                 budget.add_income();
                 break;
+                  case '2':
+                budget.display_incomes();
+                break;
 
             case '7':
                 budget.change_users_password();

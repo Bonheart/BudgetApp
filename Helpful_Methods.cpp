@@ -117,7 +117,6 @@ bool Helpful_Methods::check_if_text_has_dots(string text) {
 int Helpful_Methods::check_how_many_dots_user_entered(string text) {
 
     int counting = 0;
-    bool truth;
 
     for( unsigned int i = 0; i < text.length(); i++) {
 

@@ -13,17 +13,22 @@ using namespace std;
 
 class Income_Expense_Manager{
 
-    vector <Income> incoome;
+    vector <Income> incomes;
     Income add_info_about_income();
     Date date;
     Income_File income_file;
-    const int LOGGED_USER_ID;
+    int logged_user_id;
 
     public:
 
-    Income_Expense_Manager(string income_file_name, int logged_user_id) : income_file(income_file_name), LOGGED_USER_ID(logged_user_id) {};
+    Income_Expense_Manager(string income_file_name, int logged_user_id) : income_file(income_file_name), logged_user_id(logged_user_id) {
+
+        incomes = income_file.load_income_from_file(logged_user_id);
+
+    };
     int get_new_income_id();
     void add_new_income();
+    void display_income(int logged_user_id);
 
 
 };

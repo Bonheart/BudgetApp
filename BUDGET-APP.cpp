@@ -52,6 +52,12 @@ void Budget_App::change_users_password() {
 
 }
 
+void Budget_App::display_incomes(){
+
+    income_expense_manager ->display_income(user_manager.get_logged_users_id());
+
+}
+
 void Budget_App::add_income() {
 
     if(user_manager.check_if_user_is_logged()) {

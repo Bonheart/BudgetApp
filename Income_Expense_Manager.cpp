@@ -4,7 +4,7 @@ void Income_Expense_Manager::add_new_income() {
 
     Income income = add_info_about_income();
 
-    incoome.push_back(income);
+    incomes.push_back(income);
 
     income_file.add_income_to_file(income);
 
@@ -20,7 +20,7 @@ Income Income_Expense_Manager::add_info_about_income() {
     string income_date = "", income_title = "", income_amount = "";
 
     income.set_incomes_id(income_file.get_last_income_id() + 1);
-    income.set_logged_users_id(LOGGED_USER_ID);
+    income.set_logged_users_id(logged_user_id);
 
     string data_option_choice;
 
@@ -36,13 +36,13 @@ Income Income_Expense_Manager::add_info_about_income() {
             Sleep(2000);
             system("cls");
 
-            income_date = date.entering_manual_date(); // do settera
+            income_date = date.entering_manual_date();
             income.set_date_in_string(income_date);
             Sleep(1500);
             system("cls");
 
             cout << "Enter income title: " << endl;
-            income_title = Helpful_Methods::load_line(); // do settera
+            income_title = Helpful_Methods::load_line();
             income.set_incomes_title(income_title);
             system("cls");
 
@@ -92,4 +92,31 @@ Income Income_Expense_Manager::add_info_about_income() {
     }
 
     return income;
+}
+
+void Income_Expense_Manager::display_income(int logged_user_id){
+
+    Income income;
+
+    unsigned int i = 0;
+    cout << "1" << endl;
+    while (i < incomes.size()){
+            cout << "250" << endl;
+            Sleep(1500);
+
+//if(income.get_logged_users_id() == logged_user_id){
+
+        cout << incomes[i].get_incomes_title() << endl;
+        cout << incomes[i].get_incomes_amount() << endl;
+        cout << incomes[i].get_date_in_string() << endl;
+        system("pause");
+
+     //   }
+        i++;
+
+
+    }
+    cout << "3" << endl;
+
+
 }
