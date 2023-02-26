@@ -16,7 +16,6 @@ void User_Manager::user_registration() {
 
 User User_Manager::insert_new_users_data() {
 
-
     User user;
 
     user.set_users_id(get_new_id_for_user());

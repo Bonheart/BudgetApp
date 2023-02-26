@@ -14,14 +14,25 @@ void Income_File::add_income_to_file(Income income){
 
     }
 
-    xml.FindElem(); // findning an element (above) -> AddElem("Users"). This main element is being researched
-    xml.IntoElem(); // I have to step inside main element so I can add another minor elements later
-    xml.AddElem("Income"); // User element added, where I'm going to nest child's tag
-    xml.IntoElem(); // stepping inside "User" element.
+    xml.FindElem();
+    xml.IntoElem();
+    xml.AddElem("Income");
+    xml.IntoElem();
 
-    xml.AddElem("title", income.get_incomes_title());
+    xml.AddElem("ID", income.get_incomes_id());
+    xml.AddElem("User ID", income.get_logged_users_id());
+    xml.AddElem("Date", income.get_date_in_string());
+    xml.AddElem("Title", income.get_incomes_title());
+    xml.AddElem("Amount", income.get_incomes_amount());
 
 
     xml.Save("income.xml");
 
+    last_income_id++;
+
+}
+
+int Income_File::get_last_income_id(){
+
+    return last_income_id ;
 }

@@ -4,26 +4,20 @@
 #include <iostream>
 
 #include "User_Manager.h"
-#include "Users_file.h"
 #include "Helpful_Methods.h"
-#include "Date.h"
-#include "Income.h"
 #include "Income_Expense_Manager.h"
-#include "Income_file.h"
 
 using namespace std;
 
 class Budget_App{
 
     User_Manager user_manager;
-    Date date;
-    Income income;
     Income_Expense_Manager *income_expense_manager;
-    Income_File income_file;
+    const string INCOME_FILE_NAME;
 
 
 public:
-    Budget_App(string users_file_name) : user_manager(users_file_name) {
+    Budget_App(string users_file_name, string income_file_name) : user_manager(users_file_name),INCOME_FILE_NAME(income_file_name)  {
 
        income_expense_manager = NULL;
 

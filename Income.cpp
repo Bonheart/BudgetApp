@@ -17,6 +17,11 @@ void Income::set_logged_users_id(int logged_user_id){
     }
 }
 
+void Income::set_date(int new_date){
+
+    date = new_date;
+
+}
 
 void Income::set_incomes_amount(string new_incomes_amount){
 
@@ -26,10 +31,10 @@ void Income::set_incomes_amount(string new_incomes_amount){
 }
 
 
-void Income::set_incomes_title(string incomes_title){
+void Income::set_incomes_title(string new_incomes_title){
 
 
-    income_title = incomes_title;
+    incomes_title = new_incomes_title;
 
 }
 
@@ -50,6 +55,10 @@ int Income::get_logged_users_id(){
 
 }
 
+int Income::get_date(){
+
+    return date;
+}
 
 string Income::get_incomes_amount(){
 
@@ -59,7 +68,7 @@ string Income::get_incomes_amount(){
 
 string Income::get_incomes_title(){
 
-    return income_title;
+    return incomes_title;
 }
 
 string Income::get_date_in_string(){
