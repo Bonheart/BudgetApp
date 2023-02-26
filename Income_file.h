@@ -9,7 +9,6 @@
 
 using namespace std;
 
-
 class Income_File{
 
     int last_income_id;
@@ -26,8 +25,5 @@ public:
     int get_last_income_id();
 
 };
-
-
-
 
 #endif // INCOME_FILE_H
