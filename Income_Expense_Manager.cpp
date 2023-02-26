@@ -36,13 +36,13 @@ Income Income_Expense_Manager::add_info_about_income() {
             Sleep(2000);
             system("cls");
 
-            income_date = date.entering_manual_date(); // do settera
+            income_date = date.entering_manual_date();
             income.set_date_in_string(income_date);
             Sleep(1500);
             system("cls");
 
             cout << "Enter income title: " << endl;
-            income_title = Helpful_Methods::load_line(); // do settera
+            income_title = Helpful_Methods::load_line();
             income.set_incomes_title(income_title);
             system("cls");
 

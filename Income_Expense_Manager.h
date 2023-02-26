@@ -21,7 +21,11 @@ class Income_Expense_Manager{
 
     public:
 
-    Income_Expense_Manager(string income_file_name, int logged_user_id) : income_file(income_file_name), LOGGED_USER_ID(logged_user_id) {};
+    Income_Expense_Manager(string income_file_name, int logged_user_id) : income_file(income_file_name), LOGGED_USER_ID(logged_user_id) {
+
+        incoome = income_file.load_income_from_file(LOGGED_USER_ID);
+
+    };
     int get_new_income_id();
     void add_new_income();
 

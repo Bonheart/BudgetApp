@@ -25,14 +25,66 @@ void Income_File::add_income_to_file(Income income){
     xml.AddElem("Title", income.get_incomes_title());
     xml.AddElem("Amount", income.get_incomes_amount());
 
-
     xml.Save("income.xml");
 
     last_income_id++;
-
 }
 
-int Income_File::get_last_income_id(){
+int Income_File::get_last_income_id() {
 
-    return last_income_id ;
+    return last_income_id;
+}
+
+vector <Income> Income_File::load_income_from_file(int logged_user_id) {
+
+    CMarkup xml;
+    Income income;
+
+    vector <Income> incoome;
+
+    string string_data = "", income_title = "", income_amount = "";
+    int income_id ;
+
+    bool check_if_file_exists = xml.Load("income.xml");
+    int found_logged_user_id_in_file;
+
+    if(check_if_file_exists == true) {
+
+        xml.FindElem("Incomes");
+        xml.IntoElem();
+
+        while(xml.FindElem("Income")){
+
+            xml.IntoElem();
+            xml.FindElem("User ID");
+            found_logged_user_id_in_file = stoi(xml.GetData());
+            if(found_logged_user_id_in_file == logged_user_id){
+
+                xml.FindElem("ID");
+                income_id = atoi(MCD_2PCSZ(xml.GetData()));
+                income.set_incomes_id(income_id);
+
+                xml.FindElem("Date");
+                string_data = xml.GetData();
+                income.set_date_in_string(string_data);
+
+                xml.FindElem("Title");
+                income_title = xml.GetData();
+                income.set_incomes_title(income_title);
+
+                xml.FindElem("Amount");
+                income_amount = xml.GetData();
+                income.set_incomes_amount(income_amount);
+
+                incoome.push_back(income);
+
+            }
+        }
+    }
+
+    else {
+        cout << "Couldn't open file ""income.xml""" << endl;
+
+    }
+    return incoome;
 }
