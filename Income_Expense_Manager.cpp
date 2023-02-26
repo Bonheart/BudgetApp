@@ -8,10 +8,8 @@ void Income_Expense_Manager::add_new_income() {
 
     income_file.add_income_to_file(income);
 
-
     cout << "income added." << endl;
     system("pause");
-
 }
 
 Income Income_Expense_Manager::add_info_about_income() {
@@ -94,7 +92,7 @@ Income Income_Expense_Manager::add_info_about_income() {
     return income;
 }
 /*
-void Income_Expense_Manager::display_income(int logged_user_id){
+void Income_Expense_Manager::display_income(int logged_user_id){ // do zrobienia odrebna metoda sprawdzajaca czy id_pobranego z pliku jest rowny zalogowanemu.
 
     Income income;
 
@@ -152,7 +150,7 @@ Expense Income_Expense_Manager::add_info_about_expense() {
             Sleep(2000);
             system("cls");
 
-            expense_date = date.entering_manual_date();
+    x        expense_date = date.entering_manual_date();
             expense.set_expense_date(expense_date);
             Sleep(1500);
             system("cls");
