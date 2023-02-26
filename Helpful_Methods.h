@@ -5,6 +5,8 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include "Income.h"
+#include "Date.h"
 
 using namespace std;
 
@@ -17,6 +19,11 @@ public:
     static char select_option_from_users_menu();
     static string int_to_string_conversion(int number);
     static void display_months_list();
+    static int check_how_many_dots_user_entered(string text);
+    static bool check_if_text_has_commas(string text);
+    static bool check_if_text_has_dots(string text);
+    static void replacing_commas_to_dots(string text);
+
 
 
 };

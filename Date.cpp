@@ -1,19 +1,11 @@
 #include "Date.h"
 
-
-
 bool Date::check_if_year_is_leap(int year) {
 
     bool leap_year;
 
-    if(leap_year = (((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0)))) {
+    leap_year = (((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0)));
         return leap_year;
-    }
-
-    else {
-        return leap_year;
-    }
-
 }
 
 
@@ -33,13 +25,18 @@ string Date::get_current_data_from_PC() {
     month_converted_to_string = Helpful_Methods::int_to_string_conversion(month);
     day_converted_to_string = Helpful_Methods::int_to_string_conversion(day);
 
+    if(month_converted_to_string.length() == 1){
+
+        month_converted_to_string = "0" + month_converted_to_string;
+    }
+    if(day_converted_to_string.length() == 1){
+
+        day_converted_to_string = "0" + day_converted_to_string;
+    }
+
     todays_date_converted_to_string = year_converted_to_string + "-" + month_converted_to_string + "-" + day_converted_to_string;
 
-    cout << todays_date_converted_to_string << endl;
-
     return todays_date_converted_to_string;
-
-
 }
 
 int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
@@ -69,7 +66,6 @@ int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
 
     return days;
 }
-
 
 string Date::entering_manual_date() {
 
@@ -158,8 +154,6 @@ string Date::entering_manual_date() {
         entered_day_converted_to_string = "0" + entered_day_converted_to_string;
     }
     current_date_in_string = Helpful_Methods::int_to_string_conversion(entered_year) + "-" + enetered_month_converted_to_string + "-" + entered_day_converted_to_string;
-
-    cout << current_date_in_string << endl;
 
     return current_date_in_string;
 }
