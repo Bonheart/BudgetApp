@@ -93,7 +93,7 @@ Income Income_Expense_Manager::add_info_about_income() {
 
     return income;
 }
-
+/*
 void Income_Expense_Manager::display_income(int logged_user_id){
 
     Income income;
@@ -103,8 +103,6 @@ void Income_Expense_Manager::display_income(int logged_user_id){
     while (i < incomes.size()){
             cout << "250" << endl;
             Sleep(1500);
-
-//if(income.get_logged_users_id() == logged_user_id){
 
         cout << incomes[i].get_incomes_title() << endl;
         cout << incomes[i].get_incomes_amount() << endl;
@@ -116,7 +114,98 @@ void Income_Expense_Manager::display_income(int logged_user_id){
 
 
     }
-    cout << "3" << endl;
+}
+*/
 
+void Income_Expense_Manager::add_new_expense() {
 
+    Expense expense = add_info_about_expense();
+
+    expenses.push_back(expense);
+
+    expense_file.add_expense_to_file(expense);
+
+    cout << "Expense added." << endl;
+    system("pause");
+
+}
+
+Expense Income_Expense_Manager::add_info_about_expense() {
+
+    Expense expense;
+    string expense_date = "", expense_title = "", expense_amount = "";
+
+    expense.set_expense_id(expense_file.get_last_expense_id() + 1);
+    expense.set_logged_user_id(logged_user_id);
+
+    string data_option_choice;
+
+    cout << "Set expense data. Two options: today's date (TD) or manually chosen date (MCD)" << endl;
+    cin >> data_option_choice;
+    transform(data_option_choice.begin(), data_option_choice.end(), data_option_choice.begin(), :: toupper);
+
+    while(true) {
+
+        if(data_option_choice == "MCD") {
+
+            cout << "You have chosen to enter date manually. Preparing." << endl;
+            Sleep(2000);
+            system("cls");
+
+            expense_date = date.entering_manual_date();
+            expense.set_expense_date(expense_date);
+            Sleep(1500);
+            system("cls");
+
+            cout << "Enter expense title: " << endl;
+            expense_title = Helpful_Methods::load_line();
+            expense.set_expense_title(expense_title);
+            system("cls");
+
+            cout << "Enter expense. Remember to type amount of expense separated with dots." << endl;
+
+            expense_amount = Helpful_Methods::load_line();
+
+            while (Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 0 || Helpful_Methods::check_if_text_has_commas(expense_amount) != false) {
+
+                cout << "Try again: " << endl;
+                expense_amount = Helpful_Methods::load_line();
+
+            }
+            expense.set_expense_amount(expense_amount);
+            break;
+
+        }
+
+        else if (data_option_choice == "TD") {
+
+            cout << "Enter expense title: " << endl;
+            expense_title = Helpful_Methods::load_line();
+            expense.set_expense_title(expense_title);
+
+            expense_date = date.get_current_data_from_PC();
+            expense.set_expense_date(expense_date);
+
+            cout << "Enter expense. Remember to type amount of expense separated with dots." << endl;
+            expense_amount = Helpful_Methods::load_line();
+
+            while (Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 0 || Helpful_Methods::check_if_text_has_commas(expense_amount) != false  ) {
+
+                cout << "Try again: " << endl;
+                expense_amount = Helpful_Methods::load_line();
+
+            }
+            expense.set_expense_amount(expense_amount);
+
+            break;
+        }
+
+        else{
+            cout << "Try again:" << endl;
+            cin >> data_option_choice;
+            transform(data_option_choice.begin(), data_option_choice.end(), data_option_choice.begin(), :: toupper);
+        }
+    }
+
+    return expense;
 }

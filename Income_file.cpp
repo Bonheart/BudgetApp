@@ -1,6 +1,6 @@
 #include "Income_file.h"
 
-void Income_File::add_income_to_file(Income income){
+int Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     CMarkup xml;
 
@@ -27,7 +27,7 @@ void Income_File::add_income_to_file(Income income){
 
     xml.Save("incomes.xml");
 
-    last_income_id++;
+    return last_income_id++;
 }
 
 int Income_File::get_last_income_id() {
@@ -93,6 +93,10 @@ if(check_if_file_exists == true){
                 incomes.push_back(income);
 
             }
+
+            else {
+                income_id = last_income_id;
+            }
         }
 }
     else {
@@ -100,5 +104,6 @@ if(check_if_file_exists == true){
         system("pause");
 
     }
+    last_income_id++;
     return incomes;
 }
