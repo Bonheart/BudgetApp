@@ -35,6 +35,12 @@ void Expense::set_expense_title(string new_expense_title){
 
 }
 
+void Expense::set_expense_date_in_int(int new_expense_date_in_int){
+
+    expense_date_in_int = new_expense_date_in_int;
+
+}
+
 string Expense::get_expense_amount(){
 
     return expense_amount;
@@ -58,4 +64,10 @@ int Expense::get_expense_id(){
 int Expense::get_logged_user_id(){
 
     return logged_user_id;
+}
+
+int Expense::get_expense_date_int(){
+
+
+    return expense_date_in_int;
 }

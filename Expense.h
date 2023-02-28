@@ -12,6 +12,7 @@ class Expense{
     string expense_title;
     int expense_id;
     int logged_user_id;
+    int expense_date_in_int;
 
 public:
 
@@ -20,6 +21,7 @@ public:
     void set_expense_title(string expens_title);
     void set_expense_id(int expens_id);
     void set_logged_user_id(int logged_use_id);
+    void set_expense_date_in_int(int expens_date_int);
 
 
     string get_expense_date();
@@ -27,6 +29,7 @@ public:
     string get_expense_title();
     int get_expense_id();
     int get_logged_user_id();
+    int get_expense_date_int();
 
 
 };

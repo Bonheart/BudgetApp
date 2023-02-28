@@ -44,12 +44,13 @@ Income Income_Expense_Manager::add_info_about_income() {
             income.set_incomes_title(income_title);
             system("cls");
 
-            cout << "Enter income. Remember to type amount of income separated with dots." << endl;
+            cout << "Enter income. Remember to type amount of income separated with ONE dot." << endl;
 
             income_amount = Helpful_Methods::load_line();
 
             while (Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 0 || Helpful_Methods::check_if_text_has_commas(income_amount) != false) {
 
+                system("cls");
                 cout << "Try again: " << endl;
                 income_amount = Helpful_Methods::load_line();
 
@@ -68,7 +69,7 @@ Income Income_Expense_Manager::add_info_about_income() {
             income_date = date.get_current_data_from_PC();
             income.set_date_in_string(income_date);
 
-            cout << "Enter income. Remember to type amount of income separated with dots." << endl;
+            cout << "Enter income. Remember to type amount of income separated with ONE dot." << endl;
             income_amount = Helpful_Methods::load_line();
 
             while (Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 0 || Helpful_Methods::check_if_text_has_commas(income_amount) != false  ) {
@@ -150,7 +151,7 @@ Expense Income_Expense_Manager::add_info_about_expense() {
             Sleep(2000);
             system("cls");
 
-    x        expense_date = date.entering_manual_date();
+            expense_date = date.entering_manual_date();
             expense.set_expense_date(expense_date);
             Sleep(1500);
             system("cls");

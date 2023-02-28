@@ -62,9 +62,11 @@ char Helpful_Methods::select_option_from_users_menu() {
 
 
 string Helpful_Methods::int_to_string_conversion(int number) {
+
     ostringstream ss;
     ss << number;
     string str = ss.str();
+
     return str;
 }
 
@@ -96,7 +98,6 @@ bool Helpful_Methods::check_if_text_has_commas(string text) {
         cout << "Entered income separated with commas. Please separate with dots." << endl;
         system("pause");
         system("cls");
-        cout << "Enter income amount once again: " << endl;
         return true;
 
     } else
@@ -128,4 +129,13 @@ int Helpful_Methods::check_how_many_dots_user_entered(string text) {
 
     }
     return counting;
+}
+
+int Helpful_Methods::date_without_dashes_in_int(string text) {
+
+    int text_in_int;
+    text.erase(remove(text.begin(), text.end(), '-'), text.end());
+    text_in_int = stoi(text);
+
+    return text_in_int;
 }

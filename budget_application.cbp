@@ -36,6 +36,10 @@
 		<Unit filename="BUDGET-APP.h" />
 		<Unit filename="Date.cpp" />
 		<Unit filename="Date.h" />
+		<Unit filename="Expense.cpp" />
+		<Unit filename="Expense.h" />
+		<Unit filename="Expense_file.cpp" />
+		<Unit filename="Expense_file.h" />
 		<Unit filename="Helpful_Methods.cpp" />
 		<Unit filename="Helpful_Methods.h" />
 		<Unit filename="Income.cpp" />
