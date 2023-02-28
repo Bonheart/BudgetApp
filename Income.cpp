@@ -17,9 +17,9 @@ void Income::set_logged_users_id(int logged_user_id){
     }
 }
 
-void Income::set_date(int new_date){
+void Income::set_date_in_int(int new_date_in_int){
 
-    date = new_date;
+    int_date = new_date_in_int;
 
 }
 
@@ -55,9 +55,9 @@ int Income::get_logged_users_id(){
 
 }
 
-int Income::get_date(){
+int Income::get_date_in_int(){
 
-    return date;
+    return int_date;
 }
 
 string Income::get_incomes_amount(){

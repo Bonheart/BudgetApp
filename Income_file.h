@@ -17,10 +17,10 @@ public:
 
     Income_File(string income_filename){
 
-        last_income_id = 0;
+    last_income_id = 0;
 
     };
-    void add_income_to_file(Income income);
+    int add_income_to_file(Income income);
     vector <Income> load_income_from_file(int logged_user_id);
     int get_last_income_id();
 

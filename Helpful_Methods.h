@@ -1,7 +1,6 @@
 #ifndef HELPFUL_METHODS_H
 #define HELPFUL_METHODS_H
 
-
 #include <iostream>
 #include <sstream>
 #include <algorithm>
@@ -23,6 +22,7 @@ public:
     static bool check_if_text_has_commas(string text);
     static bool check_if_text_has_dots(string text);
     static void replacing_commas_to_dots(string text);
+    static int date_without_dashes_in_int(string text);
 
 
 
