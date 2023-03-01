@@ -4,7 +4,7 @@ bool Date::check_if_year_is_leap(int year) {
 
     bool leap_year;
 
-    leap_year = (((year % 4 == 0) && (year %100 != 0) || (year % 400 == 0)));
+    leap_year = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
         return leap_year;
 }
 
@@ -85,13 +85,13 @@ string Date::entering_manual_date() {
     system("cls");
 
     cout << "Enter year" << endl;
-    cin >> entered_year;
+    entered_year = Helpful_Methods::load_int();
     while((entered_year < 2000) || (entered_year > current_year)) {
 
         system("cls");
         cout << "You entered wrong year " << i << " time. " << 3 - i << " attempts remaining." << endl;
         cout << "Enter year once again: " << endl;
-        cin >> entered_year;
+        entered_year = Helpful_Methods::load_int();
 
         if (i == 3) {
             cout << "You were warned. Goodbye." << endl;
@@ -102,7 +102,7 @@ string Date::entering_manual_date() {
 
     Helpful_Methods::display_months_list();
 
-    cin >> entered_month;
+    entered_month = Helpful_Methods::load_int();
     i = 1;
     while (entered_month < 1 || entered_month > 12) {
 
@@ -111,7 +111,7 @@ string Date::entering_manual_date() {
         Sleep(3000);
         system ("cls");
         Helpful_Methods::display_months_list();
-        cin >> entered_month;
+        entered_month = Helpful_Methods::load_int();
 
         if (i == 3) {
             cout << "You were warned. Goodbye." << endl;
@@ -126,17 +126,19 @@ string Date::entering_manual_date() {
     i = 1;
 
     cout << "Enter day: " << endl;
-    cin >> entered_day;
+    entered_day = Helpful_Methods::load_int();
 
     while(month_days < entered_day || entered_day < 1) {
 
         cout << "Entered day is out of range" << " (1 - " << month_days << " )" << endl;
         cout << "Attempts left: " << 3 - i << endl;
-        cin >> entered_day;
+        entered_day = Helpful_Methods::load_int();
 
-        if( i == 3) {
+        if( i == 2) {
+
             cout << "Given day has been entered wrong 3 times. Goodbye." << endl;
             exit(0);
+
         }
         i++;
     }
