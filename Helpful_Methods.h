@@ -4,7 +4,6 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include <regex>
 
 #include "Income.h"
 #include "Date.h"
@@ -14,6 +13,7 @@ using namespace std;
 class Helpful_Methods{
 
 public:
+
     static string load_line();
     static string change_first_letter_to_big_one(string text_to_convert);
     static char select_option_from_main_menu();
@@ -23,8 +23,7 @@ public:
     static int date_without_dashes_in_int(string text);
     static bool check_how_many_dots_user_entered(string text);
     static bool check_if_income_or_expense_does_have_only_dot_and_digits( string str);
-
-
+    static int load_int();
 
 };
 

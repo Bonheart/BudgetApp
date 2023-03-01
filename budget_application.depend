@@ -84,11 +84,10 @@
 1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user.h
 	<iostream>
 
-1677690300 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.h
+1677695787 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.h
 	<iostream>
 	<sstream>
 	<algorithm>
-	<regex>
 	"Income.h"
 	"Date.h"
 
@@ -105,7 +104,7 @@
 	<string>
 	<afx.h>
 
-1677690438 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.cpp
+1677695787 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.cpp
 	"Helpful_Methods.h"
 
 1677690567 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.cpp
@@ -147,7 +146,7 @@
 1677620970 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income.h
 	<iostream>
 
-1677620693 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.cpp
+1677695865 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.cpp
 	"Date.h"
 
 1677620970 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.h

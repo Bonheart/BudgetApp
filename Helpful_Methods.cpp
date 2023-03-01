@@ -127,3 +127,20 @@ bool Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(s
 
     return str.find_first_not_of("0123456789.") == std::string::npos;
 }
+
+int Helpful_Methods::load_int()
+{
+    string text = "";
+    int number = 0;
+
+    while (true)
+    {
+        getline(cin, text);
+
+        stringstream myStream(text);
+        if (myStream >> number)
+            break;
+        cout << "Given input not a number. Try again" << endl;
+    }
+    return number;
+}
