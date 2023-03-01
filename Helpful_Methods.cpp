@@ -89,35 +89,10 @@ void Helpful_Methods::display_months_list() {
 
 }
 
-bool Helpful_Methods::check_if_text_has_commas(string text) {
 
+bool Helpful_Methods::check_how_many_dots_user_entered(string text) {
 
-    if((text.find(',') != string::npos)) {
-
-        cout << endl;
-        cout << "Entered income separated with commas. Please separate with dots." << endl;
-        system("pause");
-        system("cls");
-        return true;
-
-    } else
-        return false;
-
-}
-
-bool Helpful_Methods::check_if_text_has_dots(string text) {
-
-
-    if((text.find('.') != string::npos)) {
-        return true;
-    } else
-        return false;
-
-}
-
-int Helpful_Methods::check_how_many_dots_user_entered(string text) {
-
-    int counting = 0;
+     int counting = 0;
 
     for( unsigned int i = 0; i < text.length(); i++) {
 
@@ -126,16 +101,29 @@ int Helpful_Methods::check_how_many_dots_user_entered(string text) {
             counting++;
 
         }
-
     }
-    return counting;
+    if(counting < 2){
+        return false;
+    }
+    else {
+        return true;
+    }
 }
+
 
 int Helpful_Methods::date_without_dashes_in_int(string text) {
 
     int text_in_int;
+
     text.erase(remove(text.begin(), text.end(), '-'), text.end());
+
     text_in_int = stoi(text);
 
     return text_in_int;
+}
+
+
+bool Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(string str){
+
+    return str.find_first_not_of("0123456789.") == std::string::npos;
 }

@@ -48,7 +48,7 @@ Income Income_Expense_Manager::add_info_about_income() {
 
             income_amount = Helpful_Methods::load_line();
 
-            while (Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 0 || Helpful_Methods::check_if_text_has_commas(income_amount) != false) {
+            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(income_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(income_amount) != false) {
 
                 system("cls");
                 cout << "Try again: " << endl;
@@ -72,7 +72,7 @@ Income Income_Expense_Manager::add_info_about_income() {
             cout << "Enter income. Remember to type amount of income separated with ONE dot." << endl;
             income_amount = Helpful_Methods::load_line();
 
-            while (Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(income_amount) != 0 || Helpful_Methods::check_if_text_has_commas(income_amount) != false  ) {
+            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(income_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(income_amount) != false) {
 
                 cout << "Try again: " << endl;
                 income_amount = Helpful_Methods::load_line();
@@ -165,7 +165,7 @@ Expense Income_Expense_Manager::add_info_about_expense() {
 
             expense_amount = Helpful_Methods::load_line();
 
-            while (Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 0 || Helpful_Methods::check_if_text_has_commas(expense_amount) != false) {
+            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(expense_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != false) {
 
                 cout << "Try again: " << endl;
                 expense_amount = Helpful_Methods::load_line();
@@ -188,7 +188,7 @@ Expense Income_Expense_Manager::add_info_about_expense() {
             cout << "Enter expense. Remember to type amount of expense separated with dots." << endl;
             expense_amount = Helpful_Methods::load_line();
 
-            while (Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 1 && Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != 0 || Helpful_Methods::check_if_text_has_commas(expense_amount) != false  ) {
+            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(expense_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != false) {
 
                 cout << "Try again: " << endl;
                 expense_amount = Helpful_Methods::load_line();
