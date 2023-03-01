@@ -82,7 +82,6 @@ if(check_if_file_exists == true){
 
             xml.OutOfElem();
 
-            //incoome.push_back(income);
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 income.set_incomes_id(income_id);

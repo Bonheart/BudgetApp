@@ -138,8 +138,10 @@ int Helpful_Methods::load_int()
         getline(cin, text);
 
         stringstream myStream(text);
+
         if (myStream >> number)
             break;
+
         cout << "Given input not a number. Try again" << endl;
     }
     return number;
