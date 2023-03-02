@@ -12,7 +12,7 @@
 
 
 using namespace std;
-/*
+
 class Balance {
 
     Date date;
@@ -21,16 +21,24 @@ class Balance {
 
     struct Income_sorter {
 
-        inline bool operator() (const MyStruct& struct1, const MyStruct& struct2) {
+        inline bool operator() ( Income &first_date_income,  Income &second_date_income) {
 
-            return (struct1.key < struct2.key);
+            return (first_date_income.get_date_in_int() < second_date_income.get_date_in_int());
         }
+    };
+
+    struct Expense_sorter{
+
+        inline bool operator () (Expense &first_date_expense, Expense &second_date_expense){
+
+            return (first_date_expense.get_expense_date_int() < second_date_expense.get_expense_date_int());
+        }
+
     };
 
 public:
 
 };
-*/
 
 
 #endif // BALANCE_H

@@ -140,7 +140,7 @@ int Helpful_Methods::load_int()
         stringstream myStream(text);
         if (myStream >> number)
             break;
-        cout << "Given input not a number. Try again" << endl;
+        cout << "Given input is not a number. Try again" << endl;
     }
     return number;
 }
