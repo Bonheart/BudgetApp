@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
 
+#include "Helpful_Methods.h"
 #include "Expense.h"
 #include "Markup.h"
 

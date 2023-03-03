@@ -28,8 +28,21 @@ class Balance {
         }
     };
 
+
+    struct Expense_sorter {
+
+        inline bool operator() (Expense &first_expense_date,  Expense &second_expense_date) {
+
+            return (first_expense_date.get_expense_date_int() < second_expense_date.get_expense_date_int());
+        }
+    };
+
 public:
 
+
+
+    void sort_income_balance(Income income);
+    void sort_expense_balance(Expense expense);
 };
 
 

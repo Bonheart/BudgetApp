@@ -13,10 +13,6 @@ void Budget_App::user_login() {
 
     income_expense_manager = new Income_Expense_Manager(INCOME_FILE_NAME, EXPENSE_FILE_NAME, user_manager.get_logged_users_id());
 
-//   date.get_current_data_from_PC();
-//   date.entering_manual_date();
-
-
 }
 
 char Budget_App::select_option_from_main_menu() {

@@ -47,9 +47,10 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
 
     bool check_if_file_exists = xml.Load("incomes.xml");
     int found_logged_user_id_in_file {};
+    int date_in_int;
 
     if(check_if_file_exists == true){
-        cout << "jestem tutaj" << endl;
+        cout << "jestem tutaj incomes.xml" << endl;
     }
 
 
@@ -82,6 +83,9 @@ if(check_if_file_exists == true){
 
             xml.OutOfElem();
 
+            date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
+
+
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 income.set_incomes_id(income_id);
@@ -89,6 +93,7 @@ if(check_if_file_exists == true){
                 income.set_date_in_string(string_data);
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
+                income.set_date_in_int(date_in_int);
                 incomes.push_back(income);
 
             }
