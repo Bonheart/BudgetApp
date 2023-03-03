@@ -39,8 +39,7 @@ class Balance {
 
 public:
 
-
-
+    void display_current_months_balance(vector <Income> incomes, vector <Expense> expenses);
     void sort_income_balance(Income income);
     void sort_expense_balance(Expense expense);
 };
