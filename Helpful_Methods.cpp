@@ -146,3 +146,30 @@ int Helpful_Methods::load_int()
     }
     return number;
 }
+
+
+int Helpful_Methods::string_to_int_conversion (string text) {
+
+    int int_number;
+    istringstream iss(text);
+    iss >> int_number;
+
+    return int_number;
+}
+
+string Helpful_Methods::extract_day (string date) {
+
+    int position;
+    position = date.find_last_of("-") + 1;
+    return date.substr(position,2);
+
+}
+
+
+float Helpful_Methods::string_to_float_conversion (string text) {
+
+    float float_number;
+    float_number = stof(text);
+
+    return float_number;
+}
