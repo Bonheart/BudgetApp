@@ -96,6 +96,7 @@ if(check_if_file_exists == true){
                 income.set_date_in_string(string_data);
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
+                income.set_amount_in_float(income_in_float);
                 income.set_date_in_int(date_in_int);
                 incomes.push_back(income);
 

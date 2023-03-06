@@ -92,29 +92,7 @@ Income Income_Expense_Manager::add_info_about_income() {
 
     return income;
 }
-/*
-void Income_Expense_Manager::display_income(int logged_user_id){ // do zrobienia odrebna metoda sprawdzajaca czy id_pobranego z pliku jest rowny zalogowanemu.
 
-    Income income;
-
-    unsigned int i = 0;
-    cout << "1" << endl;
-    while (i < incomes.size()){
-            cout << "250" << endl;
-            Sleep(1500);
-
-        cout << incomes[i].get_incomes_title() << endl;
-        cout << incomes[i].get_incomes_amount() << endl;
-        cout << incomes[i].get_date_in_string() << endl;
-        system("pause");
-
-     //   }
-        i++;
-
-
-    }
-}
-*/
 
 void Income_Expense_Manager::add_new_expense() {
 
@@ -207,4 +185,11 @@ Expense Income_Expense_Manager::add_info_about_expense() {
     }
 
     return expense;
+}
+
+
+void Income_Expense_Manager::display_current_months_balance(){
+
+    balance.display_current_months_balance(incomes,expenses);
+
 }

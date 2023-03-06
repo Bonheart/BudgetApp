@@ -39,9 +39,15 @@ int main() {
             case '1':
                 budget.add_income();
                 break;
+
             case '2':
                 budget.add_expense();
                 break;
+
+            case '3':
+                budget.display_current_months_balance();
+                break;
+
             case '7':
                 budget.change_users_password();
                 break;

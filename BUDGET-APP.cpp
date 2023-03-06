@@ -82,3 +82,11 @@ void Budget_App::add_expense(){
 
 
 }
+
+
+void Budget_App::display_current_months_balance(){
+
+
+    income_expense_manager -> display_current_months_balance();
+
+}

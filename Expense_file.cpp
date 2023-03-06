@@ -43,6 +43,7 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
     bool check_if_file_exists(xml.Load("expenses.xml"));
 
     string expense_data = "", expense_title = "", expense_amount = "";
+    float expense_in_float;
     int expense_id, expense_date_in_int;
     int found_logged_user_id_in_file {};
 
@@ -75,6 +76,7 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
             xml.OutOfElem();
 
             expense_date_in_int = Helpful_Methods::date_without_dashes_in_int(expense_data);
+            expense_in_float = Helpful_Methods::string_to_float_conversion(expense_amount);
 
             if(found_logged_user_id_in_file == logged_user_id) {
 
@@ -83,6 +85,7 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
                 expense.set_expense_date_in_int(expense_date_in_int);
                 expense.set_expense_title(expense_title);
                 expense.set_expense_amount(expense_amount);
+                expense.set_amount_in_float(expense_in_float);
                 expenses.push_back(expense);
 
             }

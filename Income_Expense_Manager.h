@@ -10,6 +10,7 @@
 #include "Helpful_Methods.h"
 #include "Expense.h"
 #include "Expense_file.h"
+#include "Balance.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ class Income_Expense_Manager{
     Date date;
     Income_File income_file;
     Expense_File expense_file;
+    Balance balance;
     int logged_user_id; // to wpieprzyc w constansa
 
     public:
@@ -36,12 +38,7 @@ class Income_Expense_Manager{
     void add_new_income();
     int get_new_expense_id();
     void add_new_expense();
-
-
-
-
-  //  void display_income(int logged_user_id);
-
+    void display_current_months_balance();
 
 };
 

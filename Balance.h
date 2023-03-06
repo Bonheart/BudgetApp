@@ -18,30 +18,31 @@ class Balance {
     Date date;
     Income income;
     Expense expense;
-    vector <Income> sorted_incomes;
-    vector <Expense> sorted_expenses;
+    vector <Income> incomes;
+    vector <Expense> expenses;
 
-    float balance, income_sum, expense_sum;
+   struct sort_by_income_date {
+        inline bool operator() (Income& first_date, Income& second_date)
+        {
+            return (first_date.get_date_in_int() < second_date.get_date_in_int());
+        }
+    };
 
-    float calculate_income(int first_date_income, int second_date_income);
-    float calculate_expense(int first_date_expense, int second_date_expense);
+    struct sort_by_expense_date{
 
-    vector <Income> sorted_incomes_vector(vector <Income> incomes);
-    vector <Expense> sorted_expenses_vector(vector <Expense> expenses);
-
+        inline bool operator() (Expense& first_date, Expense& second_date)
+        {
+            return (first_date.get_expense_date_int() < second_date.get_expense_date_int());
+        }
+    };
 
 public:
-    Balance(vector <Income> incomes, vector <Expense> expenses){
+    float current_month_income( Income income);
+    float current_month_expense( Expense expense);
+    void sort_income(Income income);
+    void sort_expense(Expense expense);
+    void display_current_months_balance (vector <Income> incomes, vector <Expense> expenses);
 
-        balance = 0;
-        income_sum = 0;
-        expense_sum = 0;
-
-      //  sorted_expenses = sorted_expenses_vector(expenses);
-    }
-
-    void display_current_months_balance(vector < Income > incomes, vector < Expense > expenses);
-    void calculate_current_month();
 };
 
 

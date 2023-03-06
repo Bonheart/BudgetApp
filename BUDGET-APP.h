@@ -6,6 +6,7 @@
 #include "User_Manager.h"
 #include "Helpful_Methods.h"
 #include "Income_Expense_Manager.h"
+#include "Balance.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ class Budget_App{
 
     User_Manager user_manager;
     Income_Expense_Manager *income_expense_manager;
+    Balance balance;
     const string INCOME_FILE_NAME;
     const string EXPENSE_FILE_NAME;
 
@@ -44,6 +46,8 @@ public:
     void display_incomes();
 
     bool check_if_user_is_logged();
+
+    void display_current_months_balance();
 
 
 };
