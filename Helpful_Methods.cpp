@@ -173,3 +173,41 @@ float Helpful_Methods::string_to_float_conversion (string text) {
 
     return float_number;
 }
+
+void Helpful_Methods::displaying_current_month_and_year_income(){
+
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- INCOMES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
+
+}
+
+void Helpful_Methods::displaying_current_month_and_year_expense(){
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- EXPENSES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
+}
+
+void Helpful_Methods::display_summary_income_expense_current_month(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- INCOMES AND EXPENSES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
+
+}

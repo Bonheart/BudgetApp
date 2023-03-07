@@ -93,7 +93,6 @@ Income Income_Expense_Manager::add_info_about_income() {
     return income;
 }
 
-
 void Income_Expense_Manager::add_new_expense() {
 
     Expense expense = add_info_about_expense();

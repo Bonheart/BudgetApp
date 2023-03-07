@@ -40,15 +40,8 @@ void Expense::set_expense_date_in_int(int new_expense_date_in_int){
     expense_date_in_int = new_expense_date_in_int;
 
 }
-void Expense::set_amount_in_float(float new_amount_in_float){
 
-    amount_in_float = new_amount_in_float;
-}
 
-float Expense::get_amount_in_float(){
-
-    return amount_in_float;
-}
 string Expense::get_expense_amount(){
 
     return expense_amount;

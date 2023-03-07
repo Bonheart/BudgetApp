@@ -14,4 +14,11 @@
 <Login>rg</Login>
 <Password>123</Password>
 </User>
+<User>
+<ID>3</ID>
+<Name>Ra</Name>
+<Surname>Ha</Surname>
+<Login>ra</Login>
+<Password>123</Password>
+</User>
 </Users>

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <windows.h>
 
 #include "Income.h"
 #include "Date.h"
@@ -27,6 +28,9 @@ public:
     static int string_to_int_conversion(string text);
     static string extract_day(string date);
     static float string_to_float_conversion(string text);
+    static void displaying_current_month_and_year_income();
+    static void displaying_current_month_and_year_expense();
+    static void display_summary_income_expense_current_month();
 };
 
 

@@ -45,17 +45,15 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
     string string_data = "", income_title = "", income_amount = "";
     int income_id ;
 
-    float income_in_float;
-
     bool check_if_file_exists = xml.Load("incomes.xml");
     int found_logged_user_id_in_file {};
     int date_in_int;
-
+/*
     if(check_if_file_exists == true){
         cout << "jestem tutaj incomes.xml" << endl;
     }
 
-
+*/
 if(check_if_file_exists == true){
         xml.FindElem();
         xml.IntoElem();
@@ -86,17 +84,13 @@ if(check_if_file_exists == true){
             xml.OutOfElem();
 
             date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
-            income_in_float = Helpful_Methods::string_to_float_conversion(income_amount);
-
 
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 income.set_incomes_id(income_id);
-                income.set_incomes_id(found_logged_user_id_in_file);
                 income.set_date_in_string(string_data);
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
-                income.set_amount_in_float(income_in_float);
                 income.set_date_in_int(date_in_int);
                 incomes.push_back(income);
 

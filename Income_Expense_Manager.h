@@ -42,10 +42,4 @@ class Income_Expense_Manager{
 
 };
 
-
-
-
-
-
-
 #endif // INCOME_EXPENSE_MANAGER_H
