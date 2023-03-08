@@ -39,6 +39,7 @@ class Income_Expense_Manager{
     int get_new_expense_id();
     void add_new_expense();
     void display_current_months_balance();
+    void display_last_months_balance();
 
 };
 

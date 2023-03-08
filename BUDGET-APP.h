@@ -48,7 +48,7 @@ public:
     bool check_if_user_is_logged();
 
     void display_current_months_balance();
-
+    void display_last_months_balance();
 
 };
 

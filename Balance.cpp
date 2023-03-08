@@ -13,40 +13,9 @@ void Balance::sort_expense(Expense expense) {
 
 float Balance::current_month_income(Income income) {
 
-    SYSTEMTIME st;
-    GetSystemTime(&st);
+    int income_float = 0;
 
-    float income_float = 0;
-    int year = 0, month = 0, day = 0, actual_date_int = 0, beggining_date_int = 0;
-    string day_number_in_string = "", month_number_in_string = "", day_in_string = "", months_beginning = "", years_beginning = "", begin_date = "", actual_date = "", day_begin = "01";
-
-    year = st.wYear;
-    month = st.wMonth;
-    day = st.wDay;
-
-    day_in_string = Helpful_Methods::int_to_string_conversion(day);
-
-    if (day_in_string.length() == 1) {
-        day_number_in_string = "0"+ day_in_string;
-    } else day_number_in_string = day_in_string;
-
-    months_beginning = Helpful_Methods::int_to_string_conversion(month);
-
-    if (months_beginning.length() == 1) {
-        month_number_in_string = "0"+ months_beginning;
-    } else month_number_in_string = months_beginning;
-
-    years_beginning = Helpful_Methods::int_to_string_conversion(year);
-
-    begin_date = years_beginning + month_number_in_string + day_begin;
-
-    actual_date = years_beginning + month_number_in_string + day_number_in_string;
-
-    actual_date_int = Helpful_Methods::string_to_int_conversion(actual_date);
-
-    beggining_date_int = Helpful_Methods::string_to_int_conversion(begin_date);
-
-    if (income.get_date_in_int() >= beggining_date_int && income.get_date_in_int() <= actual_date_int) {
+    if (income.get_date_in_int() >= Helpful_Methods::date_without_dashes_in_int(Date::get_fuly_beginning_date_of_current_month()) && income.get_date_in_int() <= Helpful_Methods::date_without_dashes_in_int(Date::get_current_data_from_PC())) {
 
         income_float = Helpful_Methods::string_to_float_conversion(income.get_incomes_amount());
 
@@ -63,45 +32,15 @@ float Balance::current_month_expense(Expense expense) {
     GetSystemTime(&st);
 
     float expense_float = 0;
-    int year = 0, month = 0, day = 0, actual_date_int = 0, beggining_date_int = 0;
-    string day_number_in_string = "", month_number_in_string = "", day_in_string = "", months_beginning = "", years_beginning = "", begin_date = "", actual_date = "", day_begin = "01";
 
-    year = st.wYear;
-    month = st.wMonth;
-    day = st.wDay;
-
-    day_in_string = Helpful_Methods::int_to_string_conversion(day);
-
-    if (day_in_string.length() == 1) {
-        day_number_in_string = "0" + day_in_string;
-    } else day_number_in_string = day_in_string;
-
-    months_beginning = Helpful_Methods::int_to_string_conversion(month);
-
-    if (months_beginning.length() == 1) {
-        month_number_in_string = "0" + months_beginning;
-    } else month_number_in_string = months_beginning;
-
-    years_beginning = Helpful_Methods::int_to_string_conversion(year);
-
-    begin_date = years_beginning + month_number_in_string + day_begin;
-
-    actual_date = years_beginning + month_number_in_string + day_number_in_string;
-
-    actual_date_int = Helpful_Methods::string_to_int_conversion(actual_date);
-
-    beggining_date_int = Helpful_Methods::string_to_int_conversion(begin_date);
-
-    if (expense.get_expense_date_int() >= beggining_date_int && expense.get_expense_date_int() <= actual_date_int) {
+    if (expense.get_expense_date_int() >= Helpful_Methods::date_without_dashes_in_int(Date::get_fuly_beginning_date_of_current_month()) && expense.get_expense_date_int() <= Helpful_Methods::date_without_dashes_in_int(Date::get_current_data_from_PC())) {
 
         expense_float = Helpful_Methods::string_to_float_conversion(expense.get_expense_amount());
-
         return expense_float;
-    } else {
-        return 0;
-    }
-}
 
+    } else return 0;
+
+}
 
 bool answer(char choice){
 
@@ -123,6 +62,7 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
 
     SYSTEMTIME st;
     GetSystemTime(&st);
+
 
     float incomes_amount = 0;
     float income_sum = 0;
@@ -147,10 +87,10 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
             cout << "You chose not to display all incomes. Moving forward." << endl;
         }
 
-        for (unsigned int i = 0; i < incomes.size(); i ++) {
-
-            sort_income(i);
-            incomes_amount = Helpful_Methods::string_to_float_conversion(incomes[i].get_incomes_amount());
+         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
+        {
+            sort_income(*itr);
+            incomes_amount = current_month_income(*itr);
             income_sum = income_sum + incomes_amount;
         }
 
@@ -182,10 +122,10 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
         system("pause");
         system("cls");
 
-        for (unsigned int i = 0; i < expenses.size(); i ++) {
+       for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++){
 
-            sort_expense(i);
-            expense_amount = Helpful_Methods::string_to_float_conversion(expenses[i].get_expense_amount());
+            sort_expense(*itr);
+            expense_amount = current_month_expense(*itr);
             expense_sum = expense_sum + expense_amount;
 
         }
@@ -198,7 +138,7 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
     Helpful_Methods::display_summary_income_expense_current_month();
 
     cout << "Income sum is equal:  " << setprecision(20) << income_sum << endl;
-    cout << "Expense sum is equal:  " <<  expense_sum << endl;
+    cout << "Expense sum is equal:  " << setprecision(20) << expense_sum << endl;
 
     system("pause");
     system("cls");
@@ -210,16 +150,15 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
 
     cout << "Do you wish to display difference between incomes and expenses? (y/n)" << endl;
     cin >> choice;
-    system("cls");
 
     if(answer(choice) == true) {
 
         float income_expense_difference = income_sum - expense_sum;
-        cout << "Calulating process. Please wait." << endl;
+        cout << "Calculating process. Please wait." << endl;
         Sleep(3000);
 
         cout << "--------------- Difference is equal --------------- " << endl;
-        cout << "---------------       " << setprecision(20) << income_expense_difference << "          --------------- "<< endl << endl;
+        cout << "--------------- " << setprecision(20) << income_expense_difference << " --------------- "<< endl << endl;
         system("pause");
 
     }
@@ -230,6 +169,128 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
 
     }
 }
+
+float Balance::calculate_last_month_income(Income income){
+
+    float income_amount = 0;
+
+    if (income.get_date_in_int() >= Helpful_Methods::date_without_dashes_in_int(Date::get_fully_beginning_date_of_previous_month()) && income.get_date_in_int() <= Helpful_Methods::date_without_dashes_in_int(Date::get_fully_end_date_of_previous_month())){
+
+        income_amount = Helpful_Methods::string_to_float_conversion(income.get_incomes_amount());
+        return income_amount;
+
+    }
+
+    else return 0;
+}
+
+float Balance::calculate_expense_of_last_month(Expense expense){
+
+    float expense_amount = 0;
+
+    if (expense.get_expense_date_int() >= Helpful_Methods::date_without_dashes_in_int(Date::get_fully_beginning_date_of_previous_month()) && expense.get_expense_date_int() <= Helpful_Methods::date_without_dashes_in_int(Date::get_fully_end_date_of_previous_month())){
+
+        expense_amount = Helpful_Methods::string_to_float_conversion(expense.get_expense_amount());
+        return expense_amount;
+
+    }
+    else return 0;
+
+}
+
+
+void Balance::display_last_month_balance(vector <Income> incomes, vector <Expense> expenses){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+
+    float incomes_amount = 0;
+    float income_sum = 0;
+    system("cls");
+
+    char choice;
+
+    sort(incomes.begin(), incomes.end(), sort_by_income_date());
+    sort(expenses.begin(), expenses.end(), sort_by_expense_date());
+
+    if (incomes.empty() == false) {
+
+        for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++){
+
+            sort_income(*itr);
+            incomes_amount = calculate_last_month_income(*itr);
+            income_sum = income_sum + incomes_amount;
+        }
+
+    } else {
+        cout << "No incomes in ";
+
+        cout << "sorry." << endl;
+    }
+    system("pause");
+    system("cls");
+
+    float expense_sum = 0;
+    float expense_amount = 0;
+
+    if (expenses.empty() == false) {
+
+
+        cout << "Do you wish to display all expenses? Answer (y/n)" << endl;
+        cin >> choice;
+
+        if ( answer(choice) == true) {
+            display_info_about_expenses(expenses);
+        }
+        else{
+            cout << "You chose not to display all expenses. Moving forward." << endl;
+        }
+        system("pause");
+        system("cls");
+
+       for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++){
+
+            sort_expense(*itr);
+            expense_amount = calculate_expense_of_last_month(*itr);
+            expense_sum = expense_sum + expense_amount;
+
+        }
+    } else {
+        cout << "No expenses in: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear);
+    }
+
+    cout << "Income sum is equal:  " << setprecision(20) << income_sum << endl;
+    cout << "Expense sum is equal:  " << setprecision(20) << expense_sum << endl;
+
+    system("pause");
+    system("cls");
+
+    cout << "Do you wish to display difference between incomes and expenses? (y/n)" << endl;
+    cin >> choice;
+
+    if(answer(choice) == true) {
+
+        float income_expense_difference = income_sum - expense_sum;
+        cout << "Calulating process. Please wait." << endl;
+        Sleep(3000);
+
+        cout << "--------------- Difference is equal --------------- " << endl;
+        cout << "--------------- " << setprecision(20) << income_expense_difference << " --------------- "<< endl << endl;
+        system("pause");
+
+    }
+
+    if(answer(choice) == false){
+
+        cout << "Difference has not been calculated. Goodbye." << endl;
+
+    }
+
+}
+
 
 void Balance::display_info_about_incomes(vector <Income> incomes) {
 
@@ -242,6 +303,7 @@ void Balance::display_info_about_incomes(vector <Income> incomes) {
     }
 }
 
+
 void Balance::display_info_about_expenses(vector <Expense> expenses) {
 
     for (unsigned int i = 0; i < expenses.size(); i ++) {
@@ -251,4 +313,12 @@ void Balance::display_info_about_expenses(vector <Expense> expenses) {
         cout << "Income date:                          " << expenses[i].get_expense_date() << endl;
         cout << endl;
     }
+}
+
+void Balance::display_incomes(){
+
+    cout << "Income title:                         " << income.get_incomes_title()<< endl;
+        cout << "Income amount:                        " << income.get_incomes_amount() << endl;
+        cout << "Income date:                          " << income.get_date_in_string() << endl;
+        cout << endl;
 }

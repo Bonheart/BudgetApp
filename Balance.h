@@ -45,12 +45,10 @@ public:
     void display_current_months_balance (vector <Income> incomes, vector <Expense> expenses);
     void display_info_about_incomes(vector <Income> incomes);
     void display_info_about_expenses(vector <Expense> expenses);
-
-
-   float CalculateIncomeSum(int dateBegin, int dateEnd);
-
-    float CalculateExpenseSum(int dateBegin, int dateEnd);
-    void current_mont();
+    float calculate_last_month_income(Income income);
+    float calculate_expense_of_last_month(Expense expense);
+    void display_last_month_balance(vector <Income> incomes, vector <Expense> expenses);
+    void display_incomes();
 
 };
 

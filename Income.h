@@ -41,7 +41,6 @@ public:
     string get_incomes_amount();
     string get_incomes_title();
     string get_date_in_string();
-
 };
 
 

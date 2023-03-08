@@ -210,3 +210,201 @@ void Date::display_current_year(int year){
     cout << year ;
 
 }
+
+
+string Date::get_previous_month(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+
+    int  month = 0, previous_month = 0;
+    string month_in_string = "";
+
+    month = st.wMonth;
+
+    if (month == 1)
+    {
+        previous_month = 12;
+    }
+    else
+    {
+        previous_month = month - 1;
+    }
+
+    switch(previous_month){
+
+    case 1:
+        month_in_string = "01";
+    break;
+    case 2:
+        month_in_string = "02";
+    break;
+    case 3:
+        month_in_string = "03";
+    break;
+    case 4:
+        month_in_string = "04";
+    break;
+    case 5:
+        month_in_string = "05";
+    break;
+    case 6:
+        month_in_string = "06";
+    break;
+    case 7:
+        month_in_string = "07";
+    break;
+    case 8:
+        month_in_string = "08";
+    break;
+    case 9:
+        month_in_string = "09";
+    break;
+    case 10:
+        month_in_string = "10";
+    break;
+    case 11:
+        month_in_string = "11";
+    break;
+    case 12:
+        month_in_string = "12";
+    break;
+
+    }
+    return month_in_string;
+}
+
+string Date::get_end_day(string month){
+
+    Date date;
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    int year;
+    year = st.wYear;
+
+    string days = "";
+
+    if (month == "04" || month == "06" || month == "09" || month == "11") {
+
+        days = "30";
+        return days;
+    }
+
+    else if (month == "02") {
+
+        if(date.check_if_year_is_leap(year) == true) {
+            days = "29";
+        } else {
+            days = "28";
+            return days;
+        }
+
+    } else {
+        days = "31";
+    }
+
+    return days;
+
+}
+
+string Date::get_fully_end_date_of_previous_month(){
+
+     SYSTEMTIME st;
+    GetSystemTime(&st);
+    int year = st.wYear;
+    string year_in_string = "";
+    year_in_string = Helpful_Methods::int_to_string_conversion(year);
+
+    string date = "";
+    date = year_in_string + get_previous_month() + get_end_day(get_previous_month());
+    return date;
+
+}
+
+string Date::get_fully_beginning_date_of_previous_month(){
+
+  SYSTEMTIME st;
+    GetSystemTime(&st);
+    int year = st.wYear;
+    string year_in_string = "";
+    year_in_string = Helpful_Methods::int_to_string_conversion(year);
+
+    string date = "";
+    date = year_in_string + get_previous_month() + "01";
+    return date;
+
+
+}
+
+string Date::get_actual_month(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+
+    int  month = 0;
+    string month_in_string = "";
+
+    month = st.wMonth;
+
+
+
+    switch(month){
+
+    case 1:
+        month_in_string = "01";
+    break;
+    case 2:
+        month_in_string = "02";
+    break;
+    case 3:
+        month_in_string = "03";
+    break;
+    case 4:
+        month_in_string = "04";
+    break;
+    case 5:
+        month_in_string = "05";
+    break;
+    case 6:
+        month_in_string = "06";
+    break;
+    case 7:
+        month_in_string = "07";
+    break;
+    case 8:
+        month_in_string = "08";
+    break;
+    case 9:
+        month_in_string = "09";
+    break;
+    case 10:
+        month_in_string = "10";
+    break;
+    case 11:
+        month_in_string = "11";
+    break;
+    case 12:
+        month_in_string = "12";
+    break;
+
+    }
+    return month_in_string;
+}
+
+
+string Date::get_fuly_beginning_date_of_current_month(){
+
+     SYSTEMTIME st;
+    GetSystemTime(&st);
+    int year = st.wYear;
+    string year_in_string = "";
+    year_in_string = Helpful_Methods::int_to_string_conversion(year);
+
+    string date = "";
+    date = year_in_string + get_actual_month() + "01";
+    return date;
+
+}

@@ -47,6 +47,8 @@ int main() {
             case '3':
                 budget.display_current_months_balance();
                 break;
+            case '4':
+                budget.display_last_months_balance();
 
             case '7':
                 budget.change_users_password();

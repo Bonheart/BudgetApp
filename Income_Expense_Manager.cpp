@@ -20,6 +20,8 @@ Income Income_Expense_Manager::add_info_about_income() {
     income.set_incomes_id(income_file.get_last_income_id() + 1);
     income.set_logged_users_id(logged_user_id);
 
+  //  Date::get_fully_end_date();
+    Date::get_fully_beginning_date_of_previous_month();
     string data_option_choice;
 
     cout << "Set income data. Two options: today's date (TD) or manually chosen date (MCD)" << endl;
@@ -191,4 +193,9 @@ void Income_Expense_Manager::display_current_months_balance(){
 
     balance.display_current_months_balance(incomes,expenses);
 
+}
+
+void Income_Expense_Manager::display_last_months_balance(){
+
+    balance.display_last_month_balance(incomes,expenses);
 }

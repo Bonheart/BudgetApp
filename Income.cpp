@@ -30,7 +30,6 @@ void Income::set_incomes_amount(string new_incomes_amount){
 
 }
 
-
 void Income::set_incomes_title(string new_incomes_title){
 
 
