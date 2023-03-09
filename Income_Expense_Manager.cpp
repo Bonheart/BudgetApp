@@ -199,3 +199,9 @@ void Income_Expense_Manager::display_last_months_balance(){
 
     balance.display_last_month_balance(incomes,expenses);
 }
+
+void Income_Expense_Manager::display_selected_period_of_time_balance(){
+
+    balance.display_selected_period_of_time_balance(incomes,expenses);
+
+}

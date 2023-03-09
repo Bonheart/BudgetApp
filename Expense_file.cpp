@@ -1,6 +1,6 @@
 #include "Expense_file.h"
 
-void Expense_File::add_expense_to_file(Expense expense) {
+int Expense_File::add_expense_to_file(Expense expense) {
 
     CMarkup xml;
 
@@ -10,7 +10,6 @@ void Expense_File::add_expense_to_file(Expense expense) {
 
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Expenses"); // adding root main name
-
     }
 
     xml.FindElem();
@@ -28,7 +27,6 @@ void Expense_File::add_expense_to_file(Expense expense) {
 
     last_expense_id++;
 }
-
 
 vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
@@ -81,7 +79,6 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
                 expense.set_expense_title(expense_title);
                 expense.set_expense_amount(expense_amount);
                 expenses.push_back(expense);
-
 
             }
 

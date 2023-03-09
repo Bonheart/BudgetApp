@@ -24,7 +24,7 @@ public:
 
     }
     vector <Expense> load_expenses_from_file(int logged_user_id);
-    void add_expense_to_file(Expense expense);
+    int add_expense_to_file(Expense expense);
     int get_last_expense_id();
 
 

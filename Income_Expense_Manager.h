@@ -40,6 +40,7 @@ class Income_Expense_Manager{
     void add_new_expense();
     void display_current_months_balance();
     void display_last_months_balance();
+    void display_selected_period_of_time_balance();
 
 };
 

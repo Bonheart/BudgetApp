@@ -8,7 +8,6 @@ bool Date::check_if_year_is_leap(int year) {
         return leap_year;
 }
 
-
 string Date::get_current_data_from_PC() {
 
     SYSTEMTIME st;
@@ -68,6 +67,7 @@ int Date::check_amount_of_days_in_month(bool check_if_year_is_leap, int month) {
 }
 
 string Date::entering_manual_date() {
+    Date date;
 
     SYSTEMTIME st;
     GetSystemTime(&st);
@@ -121,7 +121,7 @@ string Date::entering_manual_date() {
     }
 
     system ("cls");
-    month_days = check_amount_of_days_in_month(check_if_year_is_leap(entered_year),entered_month);
+    month_days = date.check_amount_of_days_in_month(check_if_year_is_leap(entered_year),entered_month);
 
     i = 1;
 
@@ -210,7 +210,6 @@ void Date::display_current_year(int year){
     cout << year ;
 
 }
-
 
 string Date::get_previous_month(){
 
@@ -393,7 +392,6 @@ string Date::get_actual_month(){
     }
     return month_in_string;
 }
-
 
 string Date::get_fuly_beginning_date_of_current_month(){
 

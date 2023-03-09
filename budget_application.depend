@@ -201,3 +201,139 @@
 	"Income.h"
 	"Expense.h"
 
+1678386779 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.cpp
+	"Balance.h"
+
+1678371433 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.h
+	<iostream>
+	<vector>
+	<iomanip>
+	"Helpful_Methods.h"
+	"Date.h"
+	"Income.h"
+	"Expense.h"
+
+1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+	<windows.h>
+	"Income.h"
+	"Date.h"
+
+1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.h
+	<iostream>
+
+1678354810 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.h
+	<iostream>
+	<windows.h>
+	<winbase.h>
+	"Helpful_Methods.h"
+
+1678186323 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.h
+	<iostream>
+
+1678377010 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.cpp
+	"BUDGET-APP.h"
+
+1678355890 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.h
+	<iostream>
+	"User_Manager.h"
+	"Helpful_Methods.h"
+	"Income_Expense_Manager.h"
+	"Balance.h"
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Helpful_Methods.h"
+	"Users_file.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user.h
+	<iostream>
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\users_file.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1678355622 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Income_file.h"
+	"Date.h"
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Expense_file.h"
+	"Balance.h"
+
+1678126719 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1678388866 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.h
+	<iostream>
+	<vector>
+	<windows.h>
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Markup.h"
+
+1678374576 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
+	"Date.h"
+
+1678135881 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.cpp
+	"Expense.h"
+
+1678212806 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.cpp
+	"Expense_file.h"
+
+1678231276 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.cpp
+	"Helpful_Methods.h"
+
+1678231276 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.cpp
+	"Income.h"
+
+1678355596 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
+	"Income_Expense_Manager.h"
+
+1678187456 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.cpp
+	"Income_file.h"
+
+1678355933 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\main.cpp
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user.cpp
+	"User.h"
+
+1677620693 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.cpp
+	"User_Manager.h"
+	"windows.h"
+
+1676743778 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\users_file.cpp
+	"Users_file.h"
+

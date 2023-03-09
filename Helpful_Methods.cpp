@@ -5,8 +5,8 @@ string Helpful_Methods::load_line() {
     string input = "";
     cin.sync(); // sync, so nothing is gonna crash in getting data's
     getline(cin,input);
-    return input;
 
+    return input;
 }
 
 string Helpful_Methods::change_first_letter_to_big_one(string txt_to_convert) {
@@ -60,7 +60,6 @@ char Helpful_Methods::select_option_from_users_menu() {
     return choice;
 }
 
-
 string Helpful_Methods::int_to_string_conversion(int number) {
 
     ostringstream ss;
@@ -89,7 +88,6 @@ void Helpful_Methods::display_months_list() {
 
 }
 
-
 bool Helpful_Methods::check_how_many_dots_user_entered(string text) {
 
      int counting = 0;
@@ -110,7 +108,6 @@ bool Helpful_Methods::check_how_many_dots_user_entered(string text) {
     }
 }
 
-
 int Helpful_Methods::date_without_dashes_in_int(string text) {
 
     int text_in_int;
@@ -122,14 +119,12 @@ int Helpful_Methods::date_without_dashes_in_int(string text) {
     return text_in_int;
 }
 
-
 bool Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(string str){
 
     return str.find_first_not_of("0123456789.") == std::string::npos;
 }
 
-int Helpful_Methods::load_int()
-{
+int Helpful_Methods::load_int(){
     string text = "";
     int number = 0;
 
@@ -146,7 +141,6 @@ int Helpful_Methods::load_int()
     }
     return number;
 }
-
 
 int Helpful_Methods::string_to_int_conversion (string text) {
 
@@ -167,7 +161,6 @@ float Helpful_Methods::string_to_float_conversion (string text) {
 
 void Helpful_Methods::displaying_current_month_and_year_income(){
 
-
     SYSTEMTIME st;
     GetSystemTime(&st);
 
@@ -176,10 +169,10 @@ void Helpful_Methods::displaying_current_month_and_year_income(){
         Date::display_current_year(st.wYear)  ;
         cout <<" --------------- " << endl;
         Sleep(1000);
-
 }
 
 void Helpful_Methods::displaying_current_month_and_year_expense(){
+
     SYSTEMTIME st;
     GetSystemTime(&st);
 
@@ -200,5 +193,4 @@ void Helpful_Methods::display_summary_income_expense_current_month(){
         Date::display_current_year(st.wYear)  ;
         cout <<" --------------- " << endl;
         Sleep(1000);
-
 }

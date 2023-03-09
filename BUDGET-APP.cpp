@@ -1,6 +1,5 @@
 #include "BUDGET-APP.h"
 
-
 void Budget_App::user_registration() {
 
     user_manager.user_registration(); // already have object "user_manager" of "User_Manager" class in BUDGET-APP.h as private set, so I can operate on object
@@ -31,7 +30,6 @@ bool Budget_App::check_if_user_is_logged() {
 
     return user_manager.check_if_user_is_logged();
 }
-
 
 void Budget_App::user_logout() {
 
@@ -73,19 +71,19 @@ void Budget_App::add_expense(){
         cout << "Log in first." << endl;
         system("pause");
     }
-
-
 }
-
 
 void Budget_App::display_current_months_balance(){
 
-
     income_expense_manager -> display_current_months_balance();
-
 }
 
 void Budget_App::display_last_months_balance(){
 
     income_expense_manager -> display_last_months_balance();
+}
+
+void Budget_App::display_selected_period_of_time_balance(){
+
+    income_expense_manager -> display_selected_period_of_time_balance();
 }

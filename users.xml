@@ -21,4 +21,11 @@
 <Login>ra</Login>
 <Password>123</Password>
 </User>
+<User>
+<ID>4</ID>
+<Name>Krzysztof</Name>
+<Surname>Gucwa</Surname>
+<Login>krzysio</Login>
+<Password>123</Password>
+</User>
 </Users>

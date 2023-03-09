@@ -10,7 +10,6 @@ void Balance::sort_expense(Expense expense) {
     sort(expenses.begin(), expenses.end(), sort_by_expense_date());
 }
 
-
 float Balance::current_month_income(Income income) {
 
     int income_float = 0;
@@ -23,8 +22,6 @@ float Balance::current_month_income(Income income) {
 
     } else return 0;
 }
-
-
 
 float Balance::current_month_expense(Expense expense) {
 
@@ -198,12 +195,10 @@ float Balance::calculate_expense_of_last_month(Expense expense){
 
 }
 
-
 void Balance::display_last_month_balance(vector <Income> incomes, vector <Expense> expenses){
 
     SYSTEMTIME st;
     GetSystemTime(&st);
-
 
     float incomes_amount = 0;
     float income_sum = 0;
@@ -291,6 +286,93 @@ void Balance::display_last_month_balance(vector <Income> incomes, vector <Expens
 
 }
 
+void Balance::display_selected_period_of_time_balance(vector <Income> incomes, vector <Expense> expenses) {
+
+    sort(incomes.begin(), incomes.end(), sort_by_income_date());
+    sort(expenses.begin(), expenses.end(), sort_by_expense_date());
+
+    float incomes_amount = 0;
+    float income_sum = 0;
+    string beggining_date = Date::entering_manual_date();
+    system("cls");
+    cout << "Enter ending date: " << endl;
+    string ending_date = Date::entering_manual_date();
+
+    int beggining_date_int = 0, ending_date_int = 0;
+
+    beggining_date_int = Helpful_Methods::date_without_dashes_in_int(beggining_date);
+    ending_date_int = Helpful_Methods::date_without_dashes_in_int(ending_date);
+    system("cls");
+    system ("pause");
+
+    if (incomes.empty() == false) {
+
+        for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++) {
+
+            sort_income(*itr);
+            incomes_amount = calculate_selected_period_of_time_incomes(*itr, beggining_date_int, ending_date_int);
+            income_sum = income_sum + incomes_amount;
+            cout << income_sum << endl;
+            system("pause");
+
+        }
+
+    } else {
+        cout << "No incomes in selected period of time.";
+    }
+    system("pause");
+    system("cls");
+
+    int expense_amount = 0, expense_sum = 0;
+    if (expenses.empty() == false) {
+
+        for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++) {
+
+            sort_expense(*itr);
+            expense_amount = calculate_selected_period_of_time_expenses(*itr, beggining_date_int, ending_date_int);
+            expense_sum = expense_sum + expense_amount;
+
+        }
+        cout << "KURWA OKRES : " << expense_sum << endl;
+        system ("pause");
+    } else {
+        cout << "No expenses ";
+    }
+}
+
+float Balance::calculate_selected_period_of_time_incomes(Income income, int beggining_date_int, int ending_date_int){
+
+    float income_amount = 0;
+
+    if (income.get_date_in_int() >= beggining_date_int && income.get_date_in_int() <= ending_date_int){
+
+        income_amount = Helpful_Methods::string_to_float_conversion(income.get_incomes_amount());
+
+        return income_amount;
+
+    }
+
+    else{
+        return 0;
+    }
+}
+
+float Balance::calculate_selected_period_of_time_expenses(Expense expense, int beggining_date_int, int ending_date_int){
+
+    float expense_amount = 0;
+
+    if (expense.get_expense_date_int() >= beggining_date_int && expense.get_expense_date_int() <= ending_date_int){
+
+        expense_amount = Helpful_Methods::string_to_float_conversion(expense.get_expense_amount());
+
+        return expense_amount;
+
+    }
+
+    else{
+        return 0;
+    }
+}
 
 void Balance::display_info_about_incomes(vector <Income> incomes) {
 
@@ -302,7 +384,6 @@ void Balance::display_info_about_incomes(vector <Income> incomes) {
         cout << endl;
     }
 }
-
 
 void Balance::display_info_about_expenses(vector <Expense> expenses) {
 
@@ -317,7 +398,7 @@ void Balance::display_info_about_expenses(vector <Expense> expenses) {
 
 void Balance::display_incomes(){
 
-    cout << "Income title:                         " << income.get_incomes_title()<< endl;
+        cout << "Income title:                         " << income.get_incomes_title()<< endl;
         cout << "Income amount:                        " << income.get_incomes_amount() << endl;
         cout << "Income date:                          " << income.get_date_in_string() << endl;
         cout << endl;
