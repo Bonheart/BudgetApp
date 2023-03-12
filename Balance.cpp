@@ -1,32 +1,34 @@
 #include "Balance.h"
 
 void Balance::sort_income(Income income) {
-
+    /*
+    sort(incomes.begin(), incomes.end(), [](const Income& a, const Income& b) {
+        return a.get_date_in_int() < b.get_date_in_int();
+    });
+    */
     sort(incomes.begin(), incomes.end(), sort_by_income_date());
 }
-
 void Balance::sort_expense(Expense expense) {
 
     sort(expenses.begin(), expenses.end(), sort_by_expense_date());
 }
 
-float Balance::current_month_income(Income income) {
+float Balance::current_month_income(Income income, int first_date, int second_date) {
 
-    int income_float = 0;
+    float income_float = 0;
+    float income_sum = 0;
 
-    if (income.get_date_in_int() >= Helpful_Methods::date_without_dashes_in_int(Date::get_fuly_beginning_date_of_current_month()) && income.get_date_in_int() <= Helpful_Methods::date_without_dashes_in_int(Date::get_current_data_from_PC())) {
+    if (income.get_date_in_int() >= first_date && income.get_date_in_int() <= second_date) {
 
-        income_float = Helpful_Methods::string_to_float_conversion(income.get_incomes_amount());
+       income_float = Helpful_Methods::string_to_float_conversion(income.get_incomes_amount());
 
-        return income_float;
+       return income_float;
 
-    } else return 0;
+    }
+    else return 0;
 }
 
 float Balance::current_month_expense(Expense expense) {
-
-    SYSTEMTIME st;
-    GetSystemTime(&st);
 
     float expense_float = 0;
 
@@ -60,15 +62,11 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
     SYSTEMTIME st;
     GetSystemTime(&st);
 
-
-    float incomes_amount = 0;
     float income_sum = 0;
-    system("cls");
+    float druga_suma = 0;
+    float drugi_income = 0;
 
     char choice;
-
-    sort(incomes.begin(), incomes.end(), sort_by_income_date());
-    sort(expenses.begin(), expenses.end(), sort_by_expense_date());
 
     if (incomes.empty() == false) {
 
@@ -83,13 +81,28 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
         else{
             cout << "You chose not to display all incomes. Moving forward." << endl;
         }
+/*
+         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++){
 
-         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
-        {
-            sort_income(*itr);
-            incomes_amount = current_month_income(*itr);
-            income_sum = income_sum + incomes_amount;
+           sort_income(*itr);
+        //    incomes_amount = current_month_income(*itr);
+      //      income_sum = income_sum + incomes_amount;
+
         }
+        cout << "suma iteratora: " << income_sum << endl;
+        cout << endl;
+*/
+        sort(incomes.begin(), incomes.end(),sort_by_income_date());
+        for (unsigned int i = 0; i < incomes.size(); i++){
+
+             float income_amount = current_month_income(incomes[i], 20230310, 20230330 );
+             druga_suma += income_amount;
+
+        }
+        cout << endl;
+        cout << "druga suma wynosi: " << druga_suma << endl;
+        system("pause");
+
 
     } else {
         cout << "No incomes in ";
@@ -150,7 +163,7 @@ void Balance::display_current_months_balance(vector <Income> incomes, vector <Ex
 
     if(answer(choice) == true) {
 
-        float income_expense_difference = income_sum - expense_sum;
+        float income_expense_difference = druga_suma - expense_sum;
         cout << "Calculating process. Please wait." << endl;
         Sleep(3000);
 
@@ -213,7 +226,7 @@ void Balance::display_last_month_balance(vector <Income> incomes, vector <Expens
 
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++){
 
-            sort_income(*itr);
+         //   sort_income(*itr);
             incomes_amount = calculate_last_month_income(*itr);
             income_sum = income_sum + incomes_amount;
         }
@@ -309,7 +322,7 @@ void Balance::display_selected_period_of_time_balance(vector <Income> incomes, v
 
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++) {
 
-            sort_income(*itr);
+//            sort_income(*itr);
             incomes_amount = calculate_selected_period_of_time_incomes(*itr, beggining_date_int, ending_date_int);
             income_sum = income_sum + incomes_amount;
             cout << income_sum << endl;

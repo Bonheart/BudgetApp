@@ -3,9 +3,13 @@
 #include "User_Manager.h"
 #include "BUDGET-APP.h"
 
+
+
 using namespace std;
 
 int main() {
+    vector <Income> incomes;
+    vector <Expense> expenses;
 
     Budget_App budget("users.xml", "income.xml","expenses.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 

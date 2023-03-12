@@ -1,16 +1,15 @@
 #ifndef BALANCE_H
 #define BALANCE_H
 
-
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <cmath>
 
 #include "Helpful_Methods.h"
 #include "Date.h"
 #include "Income.h"
 #include "Expense.h"
-
 
 using namespace std;
 
@@ -24,7 +23,7 @@ class Balance {
 
    struct sort_by_income_date {
 
-        inline bool operator() (Income &first_date, Income &second_date){
+        inline bool operator() (Income& first_date, Income& second_date){
             return (first_date.get_date_in_int() < second_date.get_date_in_int());
         }
     };
@@ -37,7 +36,7 @@ class Balance {
     };
 
 public:
-    float current_month_income( Income income);
+    float current_month_income(Income income, int first_date, int second_date);
     float current_month_expense( Expense expense);
     void sort_income(Income income);
     void sort_expense(Expense expense);
@@ -52,7 +51,5 @@ public:
     float calculate_selected_period_of_time_expenses(Expense expense,int beggining_date_int, int ending_date_int);
     void display_selected_period_of_time_balance(vector <Income> incomes, vector <Expense> expenses);
 };
-
-
 
 #endif // BALANCE_H

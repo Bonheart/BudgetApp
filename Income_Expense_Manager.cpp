@@ -17,8 +17,8 @@ Income Income_Expense_Manager::add_info_about_income() {
     Income income;
     string income_date = "", income_title = "", income_amount = "";
 
-    income.set_incomes_id(income_file.get_last_income_id() + 1);
-    income.set_logged_users_id(logged_user_id);
+    income.set_incomes_id(income_file.get_last_income_id());
+    income.set_logged_users_id(LOGGED_USER_ID);
 
   //  Date::get_fully_end_date();
     Date::get_fully_beginning_date_of_previous_month();
@@ -81,7 +81,6 @@ Income Income_Expense_Manager::add_info_about_income() {
 
             }
             income.set_incomes_amount(income_amount);
-
             break;
         }
 
@@ -114,7 +113,7 @@ Expense Income_Expense_Manager::add_info_about_expense() {
     string expense_date = "", expense_title = "", expense_amount = "";
 
     expense.set_expense_id(expense_file.get_last_expense_id() + 1);
-    expense.set_logged_user_id(logged_user_id);
+    expense.set_logged_user_id(LOGGED_USER_ID);
 
     string data_option_choice;
 

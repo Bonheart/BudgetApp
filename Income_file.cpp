@@ -1,11 +1,10 @@
 #include "Income_file.h"
 
-int Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
+bool Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     CMarkup xml;
 
     bool check_if_file_exists = xml.Load("incomes.xml");
-
 
     if (check_if_file_exists == false){ // if file doesnt exist, file will be created here
 
@@ -27,12 +26,9 @@ int Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     xml.Save("incomes.xml");
 
-    return last_income_id++;
-}
+   last_income_id++;
 
-int Income_File::get_last_income_id() {
-
-    return last_income_id;
+   return true;
 }
 
 vector <Income> Income_File::load_income_from_file(int logged_user_id) {
@@ -45,7 +41,6 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
     string string_data = "", income_title = "", income_amount = "";
     int income_id ;
 
-    bool check_if_file_exists = xml.Load("incomes.xml");
     int found_logged_user_id_in_file {};
     int date_in_int;
 /*
@@ -54,7 +49,8 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
     }
 
 */
-if(check_if_file_exists == true){
+
+        xml.Load("incomes.xml");
         xml.FindElem();
         xml.IntoElem();
 
@@ -92,20 +88,25 @@ if(check_if_file_exists == true){
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
                 income.set_date_in_int(date_in_int);
+                  last_income_id++;
                 incomes.push_back(income);
 
             }
 
+            else if ( string_data == "" && income_title == "" && income_amount == "" && income_id == 0){
+                last_income_id = 0;
+            }
+
             else {
-                income_id = last_income_id;
+                last_income_id = income_id;
+                  last_income_id++;
             }
         }
-}
-    else {
-        cout << "Couldn't open file ""income.xml""" << endl;
-        system("pause");
 
-    }
-    last_income_id++;
     return incomes;
+}
+
+int Income_File::get_last_income_id() {
+
+    return last_income_id;
 }

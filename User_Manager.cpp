@@ -33,12 +33,10 @@ User User_Manager::insert_new_users_data() {
     user.set_users_surname(users_surname);
 
     string users_login;
-    //  do {
     cout << "Enter login: ";
     users_login = Helpful_Methods::load_line();
     user.set_users_login(users_login);
 
-    //  } while (czyIstniejeLogin(uzytkownik.pobierz_login()) == true);
 
     string users_password;
     cout << "Enter password: ";

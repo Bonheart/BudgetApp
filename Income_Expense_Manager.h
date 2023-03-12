@@ -24,14 +24,14 @@ class Income_Expense_Manager{
     Income_File income_file;
     Expense_File expense_file;
     Balance balance;
-    int logged_user_id; // to wpieprzyc w constansa
+    const int LOGGED_USER_ID; // to wpieprzyc w constansa
 
     public:
 
-    Income_Expense_Manager(string income_file_name,string expense_file_name, int logged_user_id) : income_file(income_file_name),expense_file(expense_file_name), logged_user_id(logged_user_id) {
+    Income_Expense_Manager(string income_file_name,string expense_file_name, int logged_user_id) : income_file(income_file_name),expense_file(expense_file_name), LOGGED_USER_ID(logged_user_id) {
 
-        incomes = income_file.load_income_from_file(logged_user_id);
-        expenses = expense_file.load_expenses_from_file(logged_user_id);
+        incomes = income_file.load_income_from_file(LOGGED_USER_ID);
+        expenses = expense_file.load_expenses_from_file(LOGGED_USER_ID);
 
     };
     int get_new_income_id();

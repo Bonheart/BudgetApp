@@ -1,6 +1,6 @@
 #include "Expense_file.h"
 
-int Expense_File::add_expense_to_file(Expense expense) {
+void Expense_File::add_expense_to_file(Expense expense) {
 
     CMarkup xml;
 
@@ -42,9 +42,6 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
     if(check_if_file_exists == true) {
 
-    //    cout << "Witaj, tutaj ja plik expense.xml x)" << endl;
-      //  Sleep(1500);
-
         xml.FindElem();
         xml.IntoElem();
 
@@ -83,7 +80,7 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
             }
 
             else {
-                expense_id = last_expense_id;
+                last_expense_id = expense_id;
             }
 
         }
@@ -92,8 +89,6 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
         cout << "Couldn't open file ""expenses.xml""" << endl;
 
     }
-
-    last_expense_id ++;
 
     return expenses;
 }
