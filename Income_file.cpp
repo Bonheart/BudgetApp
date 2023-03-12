@@ -88,7 +88,7 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
                 income.set_date_in_int(date_in_int);
-                  last_income_id++;
+                last_income_id++;
                 incomes.push_back(income);
 
             }

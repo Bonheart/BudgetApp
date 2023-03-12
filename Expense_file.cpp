@@ -75,19 +75,18 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
                 expense.set_expense_date_in_int(expense_date_in_int);
                 expense.set_expense_title(expense_title);
                 expense.set_expense_amount(expense_amount);
+                last_expense_id++;
                 expenses.push_back(expense);
 
             }
 
+
+
             else {
                 last_expense_id = expense_id;
+                  last_expense_id++;
             }
-
         }
-
-    } else {
-        cout << "Couldn't open file ""expenses.xml""" << endl;
-
     }
 
     return expenses;
