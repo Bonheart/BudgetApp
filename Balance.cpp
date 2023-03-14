@@ -6,11 +6,11 @@ void Balance::sort_income(Income income) {
         return a.get_date_in_int() < b.get_date_in_int();
     });
     */
-    sort(incomes.begin(), incomes.end(), sort_by_income_date());
+ //   sort(incomes.begin(), incomes.end(), sort_by_income_date());
 }
 void Balance::sort_expense(Expense expense) {
 
-    sort(expenses.begin(), expenses.end(), sort_by_expense_date());
+   // sort(expenses.begin(), expenses.end(), sort_by_expense_date());
 }
 
 float Balance::current_month_income(Income income, int first_date, int second_date) {

@@ -11,7 +11,7 @@ int main() {
     vector <Income> incomes;
     vector <Expense> expenses;
 
-    Budget_App budget("users.xml", "income.xml","expenses.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
+    Budget_App budget("users.xml","expenses.xml","incomes.xml"); // created default xml file. gotta make a Constructor in BUDGET-APP.h and User_Manager.h
 
     char choice;
 
@@ -52,10 +52,10 @@ int main() {
                 budget.display_current_months_balance();
                 break;
             case '4':
-                budget.display_last_months_balance();
+               budget.display_last_months_balance();
                 break;
             case '5':
-                budget.display_selected_period_of_time_balance();
+               budget.display_selected_period_of_time_balance();
                 break;
 
             case '7':

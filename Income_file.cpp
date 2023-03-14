@@ -1,6 +1,6 @@
 #include "Income_file.h"
 
-bool Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
+void Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     CMarkup xml;
 
@@ -27,8 +27,6 @@ bool Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
     xml.Save("incomes.xml");
 
    last_income_id++;
-
-   return true;
 }
 
 vector <Income> Income_File::load_income_from_file(int logged_user_id) {
@@ -88,13 +86,9 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
                 income.set_date_in_int(date_in_int);
-                last_income_id++;
+                last_income_id ++;
                 incomes.push_back(income);
 
-            }
-
-            else if ( string_data == "" && income_title == "" && income_amount == "" && income_id == 0){
-                last_income_id = 0;
             }
 
             else {

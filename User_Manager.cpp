@@ -44,8 +44,6 @@ User User_Manager::insert_new_users_data() {
     user.set_users_password(users_password);
 
     return user;
-
-
 }
 
 int User_Manager::get_new_id_for_user() {

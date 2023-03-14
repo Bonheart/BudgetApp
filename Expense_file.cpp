@@ -80,11 +80,10 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
             }
 
-
-
             else {
+
                 last_expense_id = expense_id;
-                  last_expense_id++;
+                last_expense_id++;
             }
         }
     }

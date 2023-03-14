@@ -10,7 +10,7 @@ void Budget_App::user_login() {
 
     user_manager.user_login();
 
-    income_expense_manager = new Income_Expense_Manager(INCOME_FILE_NAME, EXPENSE_FILE_NAME, user_manager.get_logged_users_id());
+    income_expense_manager = new Income_Expense_Manager( EXPENSE_FILE_NAME, INCOME_FILE_NAME, user_manager.get_logged_users_id());
 
 }
 
@@ -36,7 +36,6 @@ void Budget_App::user_logout() {
     user_manager.user_logout();
     delete income_expense_manager;
     income_expense_manager = NULL;
-
 
 }
 
@@ -81,6 +80,7 @@ void Budget_App::display_current_months_balance(){
 void Budget_App::display_last_months_balance(){
 
     income_expense_manager -> display_last_months_balance();
+
 }
 
 void Budget_App::display_selected_period_of_time_balance(){

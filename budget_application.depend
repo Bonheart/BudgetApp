@@ -201,10 +201,10 @@
 	"Income.h"
 	"Expense.h"
 
-1678625936 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.cpp
+1678649468 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.cpp
 	"Balance.h"
 
-1678625936 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.h
+1678696642 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.h
 	<iostream>
 	<vector>
 	<iomanip>
@@ -222,7 +222,7 @@
 	"Income.h"
 	"Date.h"
 
-1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.h
+1678736073 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.h
 	<iostream>
 
 1678354810 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.h
@@ -234,10 +234,10 @@
 1678186323 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.h
 	<iostream>
 
-1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.cpp
+1678824763 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.cpp
 	"BUDGET-APP.h"
 
-1678355890 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.h
+1678824820 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.h
 	<iostream>
 	"User_Manager.h"
 	"Helpful_Methods.h"
@@ -267,7 +267,7 @@
 	<string>
 	<afx.h>
 
-1678548799 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.h
+1678829397 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.h
 	<iostream>
 	<vector>
 	"Income.h"
@@ -276,16 +276,15 @@
 	"Helpful_Methods.h"
 	"Expense.h"
 	"Expense_file.h"
-	"Balance.h"
 
-1678548367 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.h
+1678830519 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.h
 	<iostream>
 	<vector>
 	"Income.h"
 	"Markup.h"
 	"Helpful_Methods.h"
 
-1678448921 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.h
+1678822833 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -293,13 +292,13 @@
 	"Expense.h"
 	"Markup.h"
 
-1678374576 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
+1678830668 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
 	"Date.h"
 
 1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.cpp
 	"Expense.h"
 
-1678450993 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.cpp
+1678829802 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.cpp
 	"Expense_file.h"
 
 1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.cpp
@@ -308,13 +307,13 @@
 1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.cpp
 	"Income.h"
 
-1678617552 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
+1678831064 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
 	"Income_Expense_Manager.h"
 
-1678617460 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.cpp
+1678830519 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.cpp
 	"Income_file.h"
 
-1678471707 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\main.cpp
+1678824707 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\main.cpp
 	<iostream>
 	"Markup.h"
 	"User_Manager.h"
@@ -331,7 +330,7 @@
 1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user.cpp
 	"User.h"
 
-1678451522 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.cpp
+1678821527 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.cpp
 	"User_Manager.h"
 	"windows.h"
 

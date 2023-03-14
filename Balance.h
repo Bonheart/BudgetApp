@@ -18,8 +18,6 @@ class Balance {
     Date date;
     Income income;
     Expense expense;
-    vector <Income> incomes;
-    vector <Expense> expenses;
 
    struct sort_by_income_date {
 

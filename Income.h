@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 using namespace std;
 
 class Income{
@@ -13,7 +14,6 @@ class Income{
     string amount_of_income; // amount in string, because I'll have to convert "," into "." and that will be easier
     string incomes_title;
     string string_date;
-
 
 public:
 

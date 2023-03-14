@@ -80,11 +80,10 @@ string Date::entering_manual_date() {
     int entered_month = 0, entered_year = 0, entered_day = 0;
     string data_in_string = "", year_in_string = "", month_in_string = "", day_in_string = "";
 
-    cout << "This Budget APP works only in date range 2000-01-01 - current year's month. Any attempts to exceed this range will be punished." << endl;
-    system("pause");
     system("cls");
+    cin.sync();
 
-    cout << "Enter year" << endl;
+    cout << "Provide Year: " << endl;
     entered_year = Helpful_Methods::load_int();
     while((entered_year < 2000) || (entered_year > current_year)) {
 
