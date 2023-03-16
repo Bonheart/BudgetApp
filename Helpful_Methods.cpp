@@ -5,8 +5,8 @@ string Helpful_Methods::load_line() {
     string input = "";
     cin.sync(); // sync, so nothing is gonna crash in getting data's
     getline(cin,input);
-    return input;
 
+    return input;
 }
 
 string Helpful_Methods::change_first_letter_to_big_one(string txt_to_convert) {
@@ -60,7 +60,6 @@ char Helpful_Methods::select_option_from_users_menu() {
     return choice;
 }
 
-
 string Helpful_Methods::int_to_string_conversion(int number) {
 
     ostringstream ss;
@@ -89,7 +88,6 @@ void Helpful_Methods::display_months_list() {
 
 }
 
-
 bool Helpful_Methods::check_how_many_dots_user_entered(string text) {
 
      int counting = 0;
@@ -110,7 +108,6 @@ bool Helpful_Methods::check_how_many_dots_user_entered(string text) {
     }
 }
 
-
 int Helpful_Methods::date_without_dashes_in_int(string text) {
 
     int text_in_int;
@@ -122,14 +119,56 @@ int Helpful_Methods::date_without_dashes_in_int(string text) {
     return text_in_int;
 }
 
-
 bool Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(string str){
 
     return str.find_first_not_of("0123456789.") == std::string::npos;
 }
 
-int Helpful_Methods::load_int()
-{
+string Helpful_Methods::load_string(){
+
+    string text = "";
+    string number = "";
+
+    while (true)
+    {
+        getline(cin, text);
+      //  cin.sync();
+
+        stringstream myStream(text);
+
+        if (myStream >> number)
+            break;
+
+        cout << "Please provide title: " << endl;
+    }
+    return number;
+
+}
+
+string Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero(){
+
+    string text = "";
+    string number = "";
+
+
+    while (true)
+    {
+        cout << "Enter amount: " << endl;
+        getline(cin, text);
+        cin.sync();
+
+        stringstream myStream(text);
+
+        if (myStream >> number)
+            break;
+
+    }
+    return number;
+
+}
+
+int Helpful_Methods::load_int(){
+
     string text = "";
     int number = 0;
 
@@ -138,9 +177,68 @@ int Helpful_Methods::load_int()
         getline(cin, text);
 
         stringstream myStream(text);
+
         if (myStream >> number)
             break;
+<<<<<<< HEAD
         cout << "Given input is not a number. Try again" << endl;
+=======
+
+        cout << "Given input not a number. Try again" << endl;
+>>>>>>> feature_balance
     }
     return number;
+}
+
+int Helpful_Methods::string_to_int_conversion (string text) {
+
+    int int_number;
+    istringstream iss(text);
+    iss >> int_number;
+
+    return int_number;
+}
+
+float Helpful_Methods::string_to_float_conversion (string text) {
+
+    float float_number;
+    float_number = stof(text);
+
+    return float_number;
+}
+
+void Helpful_Methods::displaying_current_month_and_year_income(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- INCOMES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
+}
+
+void Helpful_Methods::displaying_current_month_and_year_expense(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- EXPENSES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
+}
+
+void Helpful_Methods::display_summary_income_expense_current_month(){
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+
+    cout << " --------------- INCOMES AND EXPENSES OF: ";
+        Date::display_months_name(st.wMonth);
+        Date::display_current_year(st.wYear)  ;
+        cout <<" --------------- " << endl;
+        Sleep(1000);
 }
