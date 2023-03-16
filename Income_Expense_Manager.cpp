@@ -36,24 +36,23 @@ Income Income_Expense_Manager::add_info_about_income() {
             system("cls");
 
             income_date = Date::entering_manual_date();
-            income.set_date_in_string(income_date);
-            Sleep(1500);
-            system("cls");
 
-            cout << "Enter income title: " << endl;
-            income_title = Helpful_Methods::load_line();
+            cout << "Please provide title: " << endl;
+            income.set_date_in_string(income_date);
+            income.set_date_in_int(Helpful_Methods::date_without_dashes_in_int(income_date));
+
+            //system("cls");
+
+            income_title = Helpful_Methods::load_string();
             income.set_incomes_title(income_title);
             system("cls");
 
-            cout << "Enter income. Remember to type amount of income separated with ONE dot." << endl;
-
-            income_amount = Helpful_Methods::load_line();
+            income_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(income_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(income_amount) != false) {
 
-                system("cls");
-                cout << "Try again: " << endl;
-                income_amount = Helpful_Methods::load_line();
+    //            cout << "Try again: " << endl;
+                income_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             }
             income.set_incomes_amount(income_amount);
@@ -63,20 +62,22 @@ Income Income_Expense_Manager::add_info_about_income() {
 
         else if (data_option_choice == "TD") {
 
-            cout << "Enter income title: " << endl;
-            income_title = Helpful_Methods::load_line();
+            income_title = Helpful_Methods::load_string();
+
             income.set_incomes_title(income_title);
 
             income_date = Date::get_current_data_from_PC();
+
             income.set_date_in_string(income_date);
 
-            cout << "Enter income. Remember to type amount of income separated with ONE dot." << endl;
-            income_amount = Helpful_Methods::load_line();
+            income.set_date_in_int(Helpful_Methods::date_without_dashes_in_int(income_date));
 
-            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(income_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(income_amount) != false) {
+            income_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
-                cout << "Try again: " << endl;
-                income_amount = Helpful_Methods::load_line();
+            while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(income_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(income_amount) != false){
+
+//                cout << "Try again: " << endl;
+                income_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             }
             income.set_incomes_amount(income_amount);
@@ -106,7 +107,6 @@ void Income_Expense_Manager::add_new_expense() {
 
 }
 
-
 Expense Income_Expense_Manager::add_info_about_expense() {
 
     Expense expense;
@@ -131,22 +131,19 @@ Expense Income_Expense_Manager::add_info_about_expense() {
 
             expense_date = Date::entering_manual_date();
             expense.set_expense_date(expense_date);
-            Sleep(1500);
+            expense.set_expense_date_in_int(Helpful_Methods::date_without_dashes_in_int(expense_date));
             system("cls");
 
-            cout << "Enter expense title: " << endl;
-            expense_title = Helpful_Methods::load_line();
+            cout << "Please provide title: " << endl;
+            expense_title = Helpful_Methods::load_string();
             expense.set_expense_title(expense_title);
             system("cls");
 
-            cout << "Enter expense. Remember to type amount of expense separated with dots." << endl;
-
-            expense_amount = Helpful_Methods::load_line();
+            expense_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(expense_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != false) {
 
-                cout << "Try again: " << endl;
-                expense_amount = Helpful_Methods::load_line();
+                expense_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             }
             expense.set_expense_amount(expense_amount);
@@ -156,19 +153,17 @@ Expense Income_Expense_Manager::add_info_about_expense() {
 
         else if (data_option_choice == "TD") {
 
-            cout << "Enter expense title: " << endl;
-            expense_title = Helpful_Methods::load_line();
+            expense_title = Helpful_Methods::load_string();
             expense.set_expense_title(expense_title);
 
             expense_date = Date::get_current_data_from_PC();
             expense.set_expense_date(expense_date);
+            expense.set_expense_date_in_int(Helpful_Methods::date_without_dashes_in_int(expense_date));
 
-            cout << "Enter expense. Remember to type amount of expense separated with dots." << endl;
-            expense_amount = Helpful_Methods::load_line();
+            expense_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
             while (Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(expense_amount) != true || Helpful_Methods::check_how_many_dots_user_entered(expense_amount) != false) {
 
-                cout << "Try again: " << endl;
-                expense_amount = Helpful_Methods::load_line();
+                expense_amount = Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero();
 
             }
             expense.set_expense_amount(expense_amount);
@@ -186,8 +181,6 @@ Expense Income_Expense_Manager::add_info_about_expense() {
 float Income_Expense_Manager::incomes_sum(int beginning_date, int ending_date) {
 
     Income income;
-    incomes = income_file.load_income_from_file(LOGGED_USER_ID); // poinformowac Pawla o tym ze wypieprzylem z konstruktora income_file - tu wrzcuilem aktualizacje - po najmniejszej linii oporu poszedlem. chuj.
-
 
     vector <Income> second_incomes;
 
@@ -198,20 +191,19 @@ float Income_Expense_Manager::incomes_sum(int beginning_date, int ending_date) {
 
         if (itr -> Income::get_date_in_int() >= beginning_date && itr -> Income::get_date_in_int() <= ending_date) {
 
-            second_incomes.push_back(*itr);
+           second_incomes.push_back(*itr);
             incomes_amount = itr -> get_incomes_amount();
             incomes_float = Helpful_Methods::string_to_float_conversion(incomes_amount);
             incomes_sum += incomes_float;
 
         }
     }
-/*
+
     sort(second_incomes.begin(), second_incomes.end(), [](const Income &first, const Income &second) {
 
         return first.get_date_in_int() < second.get_date_in_int();
 
     });
-    */
 
      for (unsigned int i = 0; i <  incomes.size(); i++) {
 
@@ -231,7 +223,6 @@ float Income_Expense_Manager::incomes_sum(int beginning_date, int ending_date) {
 float Income_Expense_Manager::expenses_sum(int beginning_date, int ending_date) {
 
     Expense expense;
-    expenses = expense_file.load_expenses_from_file(LOGGED_USER_ID);
 
     vector <Expense> second_expense;
 
@@ -249,20 +240,20 @@ float Income_Expense_Manager::expenses_sum(int beginning_date, int ending_date) 
 
         }
     }
-/*
+
     sort(second_expense.begin(), second_expense.end(), [](const Expense &first, const Expense &second) {
 
         return first.get_expense_date_int() < second.get_expense_date_int();
 
     });
-*/
-    for (unsigned int i = 0; i <  expenses.size(); i++) {
 
-        if (expenses[i].get_expense_date_int() >= beginning_date && expenses[i].get_expense_date_int() <= ending_date) {
+    for (unsigned int i = 0; i <  second_expense.size(); i++) {
 
-        cout << "Expense date: " << expenses[i].get_expense_date() << endl;
-        cout << "Expense title: " << expenses[i].get_expense_title() << endl;
-        cout << "Expense amount: "<< expenses[i].get_expense_amount() << endl;
+        if (second_expense[i].get_expense_date_int() >= beginning_date && second_expense[i].get_expense_date_int() <= ending_date) {
+
+        cout << "Expense date: " << second_expense[i].get_expense_date() << endl;
+        cout << "Expense title: " << second_expense[i].get_expense_title() << endl;
+        cout << "Expense amount: "<< second_expense[i].get_expense_amount() << endl;
         cout << endl;
       }
     }

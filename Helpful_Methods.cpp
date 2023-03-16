@@ -124,7 +124,51 @@ bool Helpful_Methods::check_if_income_or_expense_does_have_only_dot_and_digits(s
     return str.find_first_not_of("0123456789.") == std::string::npos;
 }
 
+string Helpful_Methods::load_string(){
+
+    string text = "";
+    string number = "";
+
+    while (true)
+    {
+        getline(cin, text);
+      //  cin.sync();
+
+        stringstream myStream(text);
+
+        if (myStream >> number)
+            break;
+
+        cout << "Please provide title: " << endl;
+    }
+    return number;
+
+}
+
+string Helpful_Methods::check_if_given_amount_is_positive_or_is_equal_to_zero(){
+
+    string text = "";
+    string number = "";
+
+
+    while (true)
+    {
+        cout << "Enter amount: " << endl;
+        getline(cin, text);
+        cin.sync();
+
+        stringstream myStream(text);
+
+        if (myStream >> number)
+            break;
+
+    }
+    return number;
+
+}
+
 int Helpful_Methods::load_int(){
+
     string text = "";
     int number = 0;
 

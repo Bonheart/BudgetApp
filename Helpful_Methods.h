@@ -30,6 +30,8 @@ public:
     static void displaying_current_month_and_year_income();
     static void displaying_current_month_and_year_expense();
     static void display_summary_income_expense_current_month();
+    static string load_string();
+    static string check_if_given_amount_is_positive_or_is_equal_to_zero();
 
 };
 

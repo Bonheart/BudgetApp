@@ -214,7 +214,7 @@
 	"Income.h"
 	"Expense.h"
 
-1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.h
+1678920139 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.h
 	<iostream>
 	<sstream>
 	<algorithm>
@@ -292,7 +292,7 @@
 	"Expense.h"
 	"Markup.h"
 
-1678830668 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
+1678927802 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
 	"Date.h"
 
 1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.cpp
@@ -301,13 +301,13 @@
 1678829802 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.cpp
 	"Expense_file.h"
 
-1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.cpp
+1678955562 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.cpp
 	"Helpful_Methods.h"
 
 1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.cpp
 	"Income.h"
 
-1678831064 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
+1678920924 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
 	"Income_Expense_Manager.h"
 
 1678830519 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.cpp
