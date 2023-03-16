@@ -1,11 +1,10 @@
 #include "Income_file.h"
 
-int Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
+void Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     CMarkup xml;
 
     bool check_if_file_exists = xml.Load("incomes.xml");
-
 
     if (check_if_file_exists == false){ // if file doesnt exist, file will be created here
 
@@ -27,12 +26,7 @@ int Income_File::add_income_to_file(Income income){ // zmienic na voida jkbc
 
     xml.Save("incomes.xml");
 
-    return last_income_id++;
-}
-
-int Income_File::get_last_income_id() {
-
-    return last_income_id;
+   last_income_id++;
 }
 
 vector <Income> Income_File::load_income_from_file(int logged_user_id) {
@@ -45,15 +39,15 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
     string string_data = "", income_title = "", income_amount = "";
     int income_id, date_in_int;
 
-    bool check_if_file_exists = xml.Load("incomes.xml");
     int found_logged_user_id_in_file {};
-
+/*
     if(check_if_file_exists == true){
-        cout << "jestem tutaj" << endl;
+        cout << "jestem tutaj incomes.xml" << endl;
     }
 
+*/
 
-if(check_if_file_exists == true){
+        xml.Load("incomes.xml");
         xml.FindElem();
         xml.IntoElem();
 
@@ -82,32 +76,32 @@ if(check_if_file_exists == true){
 
             xml.OutOfElem();
 
-
             date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
 
 
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 income.set_incomes_id(income_id);
-                income.set_incomes_id(found_logged_user_id_in_file);
                 income.set_date_in_string(string_data);
                 income.set_date_in_int(date_in_int);
                 income.set_incomes_title(income_title);
                 income.set_incomes_amount(income_amount);
+                income.set_date_in_int(date_in_int);
+                last_income_id ++;
                 incomes.push_back(income);
 
             }
 
             else {
-                income_id = last_income_id;
+                last_income_id = income_id;
+                  last_income_id++;
             }
         }
-}
-    else {
-        cout << "Couldn't open file ""income.xml""" << endl;
-        system("pause");
 
-    }
-    last_income_id++;
     return incomes;
+}
+
+int Income_File::get_last_income_id() {
+
+    return last_income_id;
 }

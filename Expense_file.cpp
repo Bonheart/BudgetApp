@@ -10,7 +10,6 @@ void Expense_File::add_expense_to_file(Expense expense) {
 
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Expenses"); // adding root main name
-
     }
 
     xml.FindElem();
@@ -29,11 +28,6 @@ void Expense_File::add_expense_to_file(Expense expense) {
     last_expense_id++;
 }
 
-int Expense_File::get_last_expense_id() {
-
-    return last_expense_id;
-}
-
 vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
     CMarkup xml;
@@ -48,13 +42,10 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
     if(check_if_file_exists == true) {
 
-      //  cout << "Witaj, tutaj ja plik expense.xml x)" << endl;
-      //  Sleep(1500);
-
         xml.FindElem();
         xml.IntoElem();
 
-        while(xml.FindElem("Expenses")) {
+        while(xml.FindElem("Expense")) {
 
             xml.IntoElem();
             xml.FindElem("ID");
@@ -79,27 +70,29 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 expense.set_expense_id(expense_id);
+                expense.set_logged_user_id(found_logged_user_id_in_file);
                 expense.set_expense_date(expense_data);
                 expense.set_expense_date_in_int(expense_date_in_int);
                 expense.set_expense_title(expense_title);
                 expense.set_expense_amount(expense_amount);
+                last_expense_id++;
                 expenses.push_back(expense);
 
             }
 
             else {
-                expense_id = last_expense_id;
+
+                last_expense_id = expense_id;
+                last_expense_id++;
             }
-
         }
-
-    } else {
-        cout << "Couldn't open file ""expense.xml""" << endl;
-
     }
-
-    last_expense_id ++;
 
     return expenses;
 }
 
+
+int Expense_File::get_last_expense_id() {
+
+    return last_expense_id;
+}

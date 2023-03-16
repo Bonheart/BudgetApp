@@ -65,14 +65,43 @@
 1676547325 source:c:\users\dell\documents\c++\budget\budgetapp\users_file.cpp
 	"Users_file.h"
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.cpp
+1678293698 D
+
+1678293698 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.cpp
+	"BUDGET-APP.h"
 	"BUDGET-APP.h"
 
-1677696030 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.h
+1678293675 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\budget-app.h
+
+1678126719 porary
 	<iostream>
 	"User_Manager.h"
 	"Helpful_Methods.h"
 	"Income_Expense_Manager.h"
+	"Balance.h"
+	<iostream>
+	<sstream>
+	<algorithm>
+	<windows.h>
+	"Income.h"
+	"Date.h"
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+	<iostream>
+	<vector>
+	"Income.h"
+	"Income_file.h"
+	"Date.h"
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Expense_file.h"
+	<iostream>
+	<vector>
+	"Income.h"
+	"Markup.h"
+	"Helpful_Methods.h"
 
 1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user_manager.h
 	<iostream>
@@ -84,12 +113,7 @@
 1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\user.h
 	<iostream>
 
-1677696030 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.h
-	<iostream>
-	<sstream>
-	<algorithm>
-	"Income.h"
-	"Date.h"
+1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.h
 
 1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\users_file.h
 	<iostream>
@@ -104,17 +128,15 @@
 	<string>
 	<afx.h>
 
-1677788086 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.cpp
+1678231276 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\helpful_methods.cpp
+	"Helpful_Methods.h"
 	"Helpful_Methods.h"
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.cpp
+1678304751 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.cpp
+	"Income_Expense_Manager.h"
 	"Income_Expense_Manager.h"
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\main.cpp
-	<iostream>
-	"Markup.h"
-	"User_Manager.h"
-	"BUDGET-APP.h"
+1678293721 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\main.cpp
 
 1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\markup.cpp
 	<stdio.h>
@@ -134,65 +156,332 @@
 1676743778 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\users_file.cpp
 	"Users_file.h"
 
-1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.h
+1678306605 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.h
 	<iostream>
 	<windows.h>
 	<winbase.h>
 	"Helpful_Methods.h"
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income.cpp
+1678231276 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income.cpp
+	"Income.h"
 	"Income.h"
 
-1677696030 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income.h
+1678231276 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income.h
+	<iostream>
 	<iostream>
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.cpp
+1678316505 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\date.cpp
+	"Date.h"
 	"Date.h"
 
-1677789182 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.h
-	<iostream>
-	<vector>
-	"Income.h"
-	"Income_file.h"
-	"Date.h"
-	"Helpful_Methods.h"
-	"Expense.h"
-	"Expense_file.h"
+1678293698 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_expense_manager.h
 
-1677696030 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_file.h
+1678126719 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_file.h
 	<iostream>
 	<vector>
 	"Income.h"
 	"Markup.h"
 	"Helpful_Methods.h"
 
-1677789100 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_file.cpp
+1678187456 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\income_file.cpp
+	"Income_file.h"
 	"Income_file.h"
 
-1677696030 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense.h
+1678186323 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense.h
+	<iostream>
 	<iostream>
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense.cpp
+1678135881 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense.cpp
+	"Expense.h"
 	"Expense.h"
 
-1677789182 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense_file.h
+1678126719 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense_file.h
 	<iostream>
 	<vector>
 	"Expense.h"
 	"Markup.h"
 	"Helpful_Methods.h"
+	<iostream>
+	<vector>
+	<windows.h>
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Markup.h"
 
-1677789100 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense_file.cpp
+1678212806 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\expense_file.cpp
+	"Expense_file.h"
 	"Expense_file.h"
 
-1677696030 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\balance.cpp
+1678314157 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\balance.cpp
+	"Balance.h"
 	"Balance.h"
 
-1677788247 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\balance.h
+1678297627 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\budgetapp\balance.h
+	"Balance.h"
 	<iostream>
 	<vector>
+	<iomanip>
 	"Helpful_Methods.h"
 	"Date.h"
 	"Income.h"
 	"Expense.h"
+
+1678649468 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.cpp
+	"Balance.h"
+
+1678696642 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\balance.h
+	<iostream>
+	<vector>
+	<iomanip>
+	<cmath>
+	"Helpful_Methods.h"
+	"Date.h"
+	"Income.h"
+	"Expense.h"
+
+1678920139 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+	<windows.h>
+	"Income.h"
+	"Date.h"
+
+1678736073 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.h
+	<iostream>
+
+1678354810 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.h
+	<iostream>
+	<windows.h>
+	<winbase.h>
+	"Helpful_Methods.h"
+
+1678186323 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.h
+	<iostream>
+
+1678824763 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.cpp
+	"BUDGET-APP.h"
+
+1678824820 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\budget-app.h
+	<iostream>
+	"User_Manager.h"
+	"Helpful_Methods.h"
+	"Income_Expense_Manager.h"
+	"Balance.h"
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Helpful_Methods.h"
+	"Users_file.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user.h
+	<iostream>
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\users_file.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1678829397 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Income_file.h"
+	"Date.h"
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Expense_file.h"
+
+1678830519 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1678822833 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.h
+	<iostream>
+	<vector>
+	<windows.h>
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Markup.h"
+
+1678927802 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\date.cpp
+	"Date.h"
+
+1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense.cpp
+	"Expense.h"
+
+1678829802 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\expense_file.cpp
+	"Expense_file.h"
+
+1678955562 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\helpful_methods.cpp
+	"Helpful_Methods.h"
+
+1678388866 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income.cpp
+	"Income.h"
+
+1678920924 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_expense_manager.cpp
+	"Income_Expense_Manager.h"
+
+1678830519 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\income_file.cpp
+	"Income_file.h"
+
+1678824707 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\main.cpp
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user.cpp
+	"User.h"
+
+1678821527 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\user_manager.cpp
+	"User_Manager.h"
+	"windows.h"
+
+1676743778 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\zapas\users_file.cpp
+	"Users_file.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\budget-app.cpp
+	"BUDGET-APP.h"
+
+1678973367 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\budget-app.h
+	<iostream>
+	"User_Manager.h"
+	"Helpful_Methods.h"
+	"Income_Expense_Manager.h"
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\user_manager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Helpful_Methods.h"
+	"Users_file.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\user.h
+	<iostream>
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\helpful_methods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+	<windows.h>
+	"Income.h"
+	"Date.h"
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income.h
+	<iostream>
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\date.h
+	<iostream>
+	<windows.h>
+	<winbase.h>
+	"Helpful_Methods.h"
+
+1677620693 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\users_file.h
+	<iostream>
+	<vector>
+	"User.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1676560807 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1678973334 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income_expense_manager.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Income_file.h"
+	"Date.h"
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Expense_file.h"
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income_file.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\expense.h
+	<iostream>
+
+1678973251 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\expense_file.h
+	<iostream>
+	<vector>
+	<windows.h>
+	"Helpful_Methods.h"
+	"Expense.h"
+	"Markup.h"
+	"Helpful_Methods.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\date.cpp
+	"Date.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\expense.cpp
+	"Expense.h"
+
+1678973435 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\expense_file.cpp
+	"Expense_file.h"
+
+1678973334 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\helpful_methods.cpp
+	"Helpful_Methods.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income.cpp
+	"Income.h"
+
+1678973278 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income_expense_manager.cpp
+	"Income_Expense_Manager.h"
+
+1678973389 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\income_file.cpp
+	"Income_file.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\main.cpp
+	<iostream>
+	"Markup.h"
+	"User_Manager.h"
+	"BUDGET-APP.h"
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1676560807 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\user.cpp
+	"User.h"
+
+1678973251 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\user_manager.cpp
+	"User_Manager.h"
+	"windows.h"
+
+1676743778 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\budgetapp\new folder\users_file.cpp
+	"Users_file.h"
 

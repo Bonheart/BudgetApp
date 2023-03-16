@@ -13,12 +13,12 @@ class Budget_App{
 
     User_Manager user_manager;
     Income_Expense_Manager *income_expense_manager;
-    const string INCOME_FILE_NAME;
     const string EXPENSE_FILE_NAME;
-
+    const string INCOME_FILE_NAME;
+    Date date;
 
 public:
-    Budget_App(string users_file_name, string income_file_name, string expense_file_name) : user_manager(users_file_name),INCOME_FILE_NAME(income_file_name),EXPENSE_FILE_NAME(expense_file_name) {
+    Budget_App(string users_file_name, string expense_file_name, string income_file_name) : user_manager(users_file_name),EXPENSE_FILE_NAME(expense_file_name),INCOME_FILE_NAME(income_file_name) {
 
        income_expense_manager = NULL;
 
@@ -45,6 +45,9 @@ public:
 
     bool check_if_user_is_logged();
 
+    void display_current_months_balance();
+    void display_last_months_balance();
+    void display_selected_period_of_time_balance();
 
 };
 

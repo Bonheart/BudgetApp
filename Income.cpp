@@ -20,22 +20,16 @@ void Income::set_logged_users_id(int logged_user_id){
 void Income::set_date_in_int(int new_date_in_int){
 
     int_date = new_date_in_int;
-
 }
 
 void Income::set_incomes_amount(string new_incomes_amount){
 
-
     amount_of_income = new_incomes_amount;
-
 }
-
 
 void Income::set_incomes_title(string new_incomes_title){
 
-
     incomes_title = new_incomes_title;
-
 }
 
 void Income::set_date_in_string(string new_date){
@@ -52,7 +46,6 @@ int Income::get_incomes_id(){
 int Income::get_logged_users_id(){
 
     return logged_users_id;
-
 }
 
 int Income::get_date_in_int(){
@@ -63,7 +56,6 @@ int Income::get_date_in_int(){
 string Income::get_incomes_amount(){
 
     return amount_of_income;
-
 }
 
 string Income::get_incomes_title(){
