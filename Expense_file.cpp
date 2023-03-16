@@ -28,11 +28,6 @@ void Expense_File::add_expense_to_file(Expense expense) {
     last_expense_id++;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 98d62c06fa3499d15b8ad334881ba3667a2e50ef
 vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
 
     CMarkup xml;
@@ -96,11 +91,6 @@ vector <Expense> Expense_File::load_expenses_from_file(int logged_user_id) {
     return expenses;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> feature_balance
->>>>>>> 98d62c06fa3499d15b8ad334881ba3667a2e50ef
 int Expense_File::get_last_expense_id() {
 
     return last_expense_id;

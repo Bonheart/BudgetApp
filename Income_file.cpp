@@ -76,21 +76,9 @@ vector <Income> Income_File::load_income_from_file(int logged_user_id) {
 
             xml.OutOfElem();
 
-<<<<<<< HEAD
             date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
 
 
-=======
-<<<<<<< HEAD
-
-            date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
-
-
-=======
-            date_in_int = Helpful_Methods::date_without_dashes_in_int(string_data);
-
->>>>>>> feature_balance
->>>>>>> 98d62c06fa3499d15b8ad334881ba3667a2e50ef
             if(found_logged_user_id_in_file == logged_user_id) {
 
                 income.set_incomes_id(income_id);
