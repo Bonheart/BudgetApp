@@ -33,8 +33,18 @@ class Income_Expense_Manager{
 
     Income_Expense_Manager(string expense_file_name, string income_file_name, int logged_user_id) : expense_file(expense_file_name), income_file(income_file_name), LOGGED_USER_ID(logged_user_id) {
 
+<<<<<<< HEAD
         expenses = expense_file.load_expenses_from_file(LOGGED_USER_ID);
         incomes = income_file.load_income_from_file(LOGGED_USER_ID);
+=======
+<<<<<<< HEAD
+        incomes = income_file.load_income_from_file(logged_user_id);
+        expenses = expense_file.load_expenses_from_file(logged_user_id);
+=======
+        expenses = expense_file.load_expenses_from_file(LOGGED_USER_ID);
+        incomes = income_file.load_income_from_file(LOGGED_USER_ID);
+>>>>>>> feature_balance
+>>>>>>> 98d62c06fa3499d15b8ad334881ba3667a2e50ef
 
     };
 

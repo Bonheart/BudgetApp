@@ -180,9 +180,18 @@ int Helpful_Methods::load_int(){
 
         if (myStream >> number)
             break;
+<<<<<<< HEAD
 
         cout << "Given input is not a number. Try again" << endl;
 
+=======
+<<<<<<< HEAD
+        cout << "Given input is not a number. Try again" << endl;
+=======
+
+        cout << "Given input not a number. Try again" << endl;
+>>>>>>> feature_balance
+>>>>>>> 98d62c06fa3499d15b8ad334881ba3667a2e50ef
     }
     return number;
 }
